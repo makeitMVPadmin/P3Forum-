@@ -8,6 +8,7 @@ import { getDocs, collection, addDoc } from "firebase/firestore";
 function App() {
   const [userList, setUserList] = useState([]);
   const [questionsList, setQuestionsList] = useState([]);
+  const [answersList, setAnswersList] = useState([]);
 
   const [newUserName, setNewUserName] = useState("");
   const [newUserEmail, setNewUserEmail] = useState("");
@@ -17,6 +18,7 @@ function App() {
 
   const usersCollection = collection(database, "Users");
   const questionsCollection = collection(database, "Questions");
+  const answersCollection = collection(database, "Answers");
 
   const getUserList = async () => {
     try {
@@ -48,9 +50,25 @@ function App() {
     }
   };
 
+  const getAnswersList = async () => {
+    try {
+      const data = await getDocs(answersCollection);
+      console.log({ data });
+      const filteredAnswersData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      console.log({ filteredAnswersData });
+      setQuestionsList(filteredAnswersData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     getUserList();
     getQuestionsList();
+    getAnswersList();
   }, []);
 
   const onSubmitUser = async () => {
@@ -100,10 +118,10 @@ function App() {
               key={user.id}
               style={{ border: "black 2px solid", width: "300px" }}
             >
-              <h2>
+              <p>
                 {user.fullName}, {user.email}
-              </h2>
-              <h2>{user.id}</h2>
+              </p>
+              <p>{user.id}</p>
             </div>
           );
         })}
@@ -123,15 +141,37 @@ function App() {
 
       <div>
         {questionsList.map((question) => {
+          console.log({ question });
           return (
             <div
               key={question.id}
               style={{ border: "black 2px solid", width: "300px" }}
             >
-              <h2>
-                {question.topic}, {question.content}
-              </h2>
-              <h2>{question.id}</h2>
+              <p>
+                {question.topic}, {question.questionContent}
+              </p>
+              <p>{question.id}</p>
+            </div>
+          );
+        })}
+      </div>
+
+      <div>
+        {answersList.map((answer) => {
+          {
+            console.log({ answer });
+          }
+          return (
+            <div
+              key={answer.id}
+              style={{ border: "black 2px solid", width: "300px" }}
+            >
+              <p>
+                User ID: {answer.userID}, Content:{answer.answerContent},
+                Question ID:
+                {answer.questionID}
+              </p>
+              <p>{answer.id}</p>
             </div>
           );
         })}
