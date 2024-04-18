@@ -48,6 +48,7 @@ const AppProvider = ({ children }) => {
             ...doc.data(),
             id: doc.id,
         }));
+
         setAnswersList(filteredAnswersData);
         } catch (error) {
         console.error(error);
@@ -70,6 +71,7 @@ const AppProvider = ({ children }) => {
         getQuestionsList();
         getAnswersList();
     }, []);
+
 
     return (
         <AppContext.Provider
