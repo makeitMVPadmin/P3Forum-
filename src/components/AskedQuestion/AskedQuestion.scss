@@ -1,0 +1,32 @@
+.asked-question {
+  width: 60%;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+
+  &__container {
+    padding: 15px;
+
+    }
+
+  &__user-details {
+    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image-container {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__body {
+    
+  }
+
+  &__actions {
+    
+  }
+}
