@@ -6,7 +6,6 @@
 
   &__container {
     padding: 15px;
-
     }
 
   &__user-details {
@@ -15,18 +14,47 @@
     align-items: center;
   }
 
-  &__image-container {
+  &__avatar-container {
     width: 42px;
     height: 42px;
     display: flex;
     align-items: center;
   }
 
+  &__text {
+    margin-right: 10px;
+  } 
+
   &__body {
     
   }
 
   &__actions {
-    
+    width: 40%;
+    display: flex;
+  }
+
+  &__button-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: #FFF;
+    padding: 0;
+  }
+
+  &__upvote,
+  &__downvote,
+  &__comment,
+  &__share {
+    height: 30px;
+  }
+
+  &__value {
+    margin-right: 10px;
   }
 }
