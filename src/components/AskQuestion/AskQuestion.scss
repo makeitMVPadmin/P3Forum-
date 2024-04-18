@@ -1,0 +1,33 @@
+.ask-question__container {
+width: 64rem;
+height: 8rem;
+display: flex;
+align-items: center;
+justify-content:space-evenly;
+border: 1px solid #828282;
+border-radius: 10px;
+background: #FFF;
+}
+
+.ask-question__profile--img {
+width: 2.8rem;
+height: 2.8rem;
+background-color: #1E1E1E;
+border-radius: 50%;
+}
+
+.ask-question__button {
+width: 56rem;
+height: 4rem;
+color: #000;
+text-align: left;
+padding-left: 1rem;
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+letter-spacing: -0.349px;
+border: none;
+border-radius: 10px;
+background-color: #ededed;
+}

@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 // import "./App.css";
 import { database } from "./config/firebase";
 import { getDocs, collection, addDoc } from "firebase/firestore";
+import AskQuestion from "./components/AskQuestion/AskQuestion";
+import QuestionModal from "./components/QuestionModal/QuestionModal";
+import PostModal from "./components/PostModal/PostModal";
 
 function App() {
   const [userList, setUserList] = useState([]);
@@ -15,6 +18,11 @@ function App() {
   const [newTopic, setNewTopic] = useState("");
   const [newQuestion, setNewQuestion] = useState("");
   // const [newUserDOB, setNewUserDOB] = useState(0);
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [isPostModal, setPostModal] = useState(false);
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+  const closePost = () => setPostModal(false);
 
   const usersCollection = collection(database, "Users");
   const questionsCollection = collection(database, "Questions");
@@ -92,6 +100,8 @@ function App() {
       });
 
       getQuestionsList();
+      closeModal();
+      setPostModal(true);
     } catch (error) {
       console.error(error);
     }
@@ -99,7 +109,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      {/* <div>
         <input
           placeholder="Name..."
           onChange={(e) => setNewUserName(e.target.value)}
@@ -175,7 +185,20 @@ function App() {
             </div>
           );
         })}
-      </div>
+      </div> */}
+      <AskQuestion openModal={openModal} />
+      {isModalOpen && (
+          <QuestionModal
+            onClose={closeModal}
+            isModalOpen={isModalOpen}
+            setNewTopic={setNewTopic}
+            setNewQuestion={setNewQuestion}
+            onSubmitQuestion={onSubmitQuestion}
+          />
+        )}
+          {isPostModal && (
+          <PostModal closePost={closePost} />
+        )}
     </div>
   );
 }
