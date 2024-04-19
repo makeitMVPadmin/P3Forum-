@@ -10,11 +10,9 @@ function Answers() {
     answersList,
     // setAnswersList,
     answersCollection,
-    getAnswersList
+    getAnswersList,
+    randomUser1
   } = useGlobalContext();
-
-  const user1 = userList[12]
-  console.log({user1})
 
   const [newAnswer, setNewAnswer] = useState("");
   const [postedAnswers, setPostedAnswers] = useState([]);
@@ -47,7 +45,7 @@ function Answers() {
         alert("You have already posted this answer.")
         return;
       }
-      
+
       const currentDate = new Date();
       const timeZoneOffsetInMilliseconds = -6 * 60 * 60 * 1000;
       const adjustedDate = new Date(currentDate.getTime() + timeZoneOffsetInMilliseconds);
@@ -57,7 +55,7 @@ function Answers() {
         answerContent: newAnswer,
         createdAt: timestamp,
         questionID: "1PBuOCLfLUfPoInfVIwt", //Needs to be changed to be dynamic
-        userID: user1.id, //Needs to be made dynamic
+        userID: randomUser1.id, //Needs to be made dynamic
         upVotes: 0,
         downVotes: 0
       });
