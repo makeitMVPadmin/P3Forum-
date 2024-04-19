@@ -14,16 +14,17 @@ const AppProvider = ({ children }) => {
     const usersCollection = collection(database, "Users");
     const questionsCollection = collection(database, "Questions");
     const answersCollection = collection(database, "Answers");
+    // console.log({answersCollection})
 
     const getUserList = async () => {
         try {
         const data = await getDocs(usersCollection);
-        console.log({ data });
+        // console.log({ data });
         const filteredUsersData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
         }));
-        console.log({ filteredUsersData });
+        // console.log({ filteredUsersData });
         setUserList(filteredUsersData);
         } catch (error) {
         console.error(error);
@@ -33,12 +34,12 @@ const AppProvider = ({ children }) => {
     const getQuestionsList = async () => {
         try {
         const data = await getDocs(questionsCollection);
-        console.log({ data });
+        // console.log({ data });
         const filteredQuestionsData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
         }));
-        console.log({ filteredQuestionsData });
+        // console.log({ filteredQuestionsData });
         setQuestionsList(filteredQuestionsData);
         } catch (error) {
         console.error(error);
@@ -48,17 +49,18 @@ const AppProvider = ({ children }) => {
     const getAnswersList = async () => {
         try {
         const data = await getDocs(answersCollection);
-        console.log({ data });
+        // console.log({ data });
         const filteredAnswersData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
         }));
-        console.log({ filteredAnswersData });
-        setQuestionsList(filteredAnswersData);
+        // console.log({ filteredAnswersData });
+        setAnswersList(filteredAnswersData);
         } catch (error) {
         console.error(error);
         }
     };
+
 
     useEffect(() => {
         getUserList();
@@ -72,10 +74,12 @@ const AppProvider = ({ children }) => {
                 userList, setUserList,
                 questionsList, setQuestionsList,
                 answersList, setAnswersList,
+                answersCollection,
                 usersCollection,
                 questionsCollection,
                 getUserList,
-                getQuestionsList,           
+                getQuestionsList,
+                getAnswersList,           
             }}>
                 {children}
         </AppContext.Provider>
