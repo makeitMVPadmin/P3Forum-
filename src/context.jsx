@@ -21,7 +21,6 @@ const AppProvider = ({ children }) => {
             ...doc.data(),
             id: doc.id,
         }));
-        // console.log({ filteredUsersData });
         setUserList(filteredUsersData);
         } catch (error) {
         console.error(error);
@@ -31,7 +30,6 @@ const AppProvider = ({ children }) => {
     const getQuestionsList = async () => {
         try {
         const data = await getDocs(questionsCollection);
-        // console.log({ data });
         const filteredQuestionsData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
@@ -46,18 +44,21 @@ const AppProvider = ({ children }) => {
     const getAnswersList = async () => {
         try {
         const data = await getDocs(answersCollection);
-        // console.log({ data });
         const filteredAnswersData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
         }));
-        // console.log({ filteredAnswersData });
         setAnswersList(filteredAnswersData);
         } catch (error) {
         console.error(error);
         }
     };
 
+    const randomUser = () => {
+        return userList[Math.floor(Math.random() * userList.length)];
+    }
+    const randomUser1 = randomUser();
+    const randomUser2 = randomUser();
 
     useEffect(() => {
         getUserList();
@@ -76,7 +77,9 @@ const AppProvider = ({ children }) => {
                 questionsCollection,
                 getUserList,
                 getQuestionsList,
-                getAnswersList,           
+                getAnswersList, 
+                randomUser1,
+                randomUser2,          
             }}>
                 {children}
         </AppContext.Provider>
