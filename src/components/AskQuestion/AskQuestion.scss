@@ -1,3 +1,7 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
 .ask-question__container {
 width: 64rem;
 height: 8rem;
@@ -19,13 +23,9 @@ border-radius: 50%;
 .ask-question__button {
 width: 56rem;
 height: 4rem;
-color: #000;
 text-align: left;
 padding-left: 1rem;
-font-size: 1.6rem;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
+@include forum-textFormat(1.6rem);
 letter-spacing: -0.349px;
 border: none;
 border-radius: 10px;

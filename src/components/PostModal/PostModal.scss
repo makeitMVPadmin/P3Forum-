@@ -1,3 +1,7 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
 .post-modal--overlay {
     position: fixed;
     bottom: 0rem;
@@ -22,10 +26,5 @@ border: 1px solid #000;
 background: #FFF;
 }
 .post-modal__text {
-color: #000;
-font-family: Gilroy;
-font-size: 1.7rem;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
+  @include forum-textFormat(1.7rem);
 }

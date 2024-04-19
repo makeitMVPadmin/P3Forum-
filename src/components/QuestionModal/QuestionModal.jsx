@@ -1,12 +1,8 @@
-
-// import { useGlobalContext } from ""../../context.jsx";
 import React, { useState } from "react";
 import "./QuestionModal.scss";
 
 
 const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestion, setNewQuestion, onSubmitQuestion }) => {
-  // const [topic, setTopic] = useState("");
-  // const [description, setDescription] = useState("");
   const [topicError, setTopicError] = useState(false);
 
   const handleSubmit = () => {
