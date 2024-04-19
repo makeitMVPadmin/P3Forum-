@@ -1,14 +1,16 @@
-import './AskedQuestion.scss'
+import { useGlobalContext } from "../../context.jsx";
+import Answers from '../Answers/Answers'
 import comment from '../../assets/comment.svg'
 import downvote from '../../assets/downvote.svg'
 import share from '../../assets/share.svg'
 import upvote from '../../assets/upvote.svg'
+import './AskedQuestion.scss'
 
 const AskedQuestion = ({ communityID, createdAt, downVotes, questionContent,
-  topic, upVotes, user }) => {
+  topic, upVotes, userID, user }) => {
 
   const { fullName, profilePhoto } = user 
-
+    console.log(user)
   return (
     <section className='asked-question'>
       <div className='asked-question__container'>
@@ -50,6 +52,7 @@ const AskedQuestion = ({ communityID, createdAt, downVotes, questionContent,
             <p className='asked-question__value'>0</p>
           </div>
         </div>
+        <Answers/>
       </div>
     </section>
   )
