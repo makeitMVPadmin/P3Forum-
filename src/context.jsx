@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-//This is firebase stuff
 import { database } from "./config/firebase";
 import { getDocs, collection } from "firebase/firestore";
 
@@ -14,12 +13,10 @@ const AppProvider = ({ children }) => {
     const usersCollection = collection(database, "Users");
     const questionsCollection = collection(database, "Questions");
     const answersCollection = collection(database, "Answers");
-    // console.log({answersCollection})
 
     const getUserList = async () => {
         try {
         const data = await getDocs(usersCollection);
-        // console.log({ data });
         const filteredUsersData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,

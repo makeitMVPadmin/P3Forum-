@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
-import { addDoc } from "firebase/firestore";
+import { addDoc, Timestamp } from "firebase/firestore";
 import "./Answers.scss";
 
 function Answers() {
@@ -10,58 +10,69 @@ function Answers() {
     answersList,
     // setAnswersList,
     answersCollection,
-    // getAnswersList
+    getAnswersList
   } = useGlobalContext();
 
-  const user1 = userList[0]
+  const user1 = userList[12]
   console.log({user1})
 
   const [newAnswer, setNewAnswer] = useState("");
+  const [postedAnswers, setPostedAnswers] = useState([]);
 
   const filteredAnswerArray = answersList.filter(answer => answer.questionID === "1PBuOCLfLUfPoInfVIwt");
 
   const answersWithUsers = filteredAnswerArray.map(answer => {
     const user = userList.find(user => user.userID === answer.userID);
-    console.log({user})
-    console.log("fullName", user.createdAt.seconds)
     const date = new Date(answer.createdAt.seconds * 1000); 
-    console.log("TEST DATE LN 28: ", new Date(1706898817 * 1000))
     const formattedDate = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
   
     return {
       answer: answer,
       user: user.fullName,
-      profilePhoto: user ? user.profilePhoto : "🙃",
+      profilePhoto: user.profilePhoto,
       createdAt: formattedDate
     };
   });
 
   const onPostAnswer = async () => {
     try {
+      if (!newAnswer.trim()) {
+        console.log("Please enter a valid answer.");
+        alert("Please enter a valid answer.")
+        return;
+      }
+  
+      if (postedAnswers.some(answer => answer === newAnswer)) {
+        console.log("You have already posted this answer.");
+        alert("You have already posted this answer.")
+        return;
+      }
+      
       const currentDate = new Date();
-      const formattedDate = currentDate.toLocaleString('en-US', {
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-      hour12: true,
-      timeZone: 'UTC',
-      timeZoneName: 'short'
-    });
+      const timeZoneOffsetInMilliseconds = -6 * 60 * 60 * 1000;
+      const adjustedDate = new Date(currentDate.getTime() + timeZoneOffsetInMilliseconds);
+      const timestamp = Timestamp.fromDate(adjustedDate);
 
       await addDoc(answersCollection, {
         answerContent: newAnswer,
-        createdAt: formattedDate,
+        createdAt: timestamp,
         questionID: "1PBuOCLfLUfPoInfVIwt", //Needs to be changed to be dynamic
         userID: user1.id, //Needs to be made dynamic
         upVotes: 0,
         downVotes: 0
       });
+
+      setNewAnswer("");
+      setPostedAnswers([...postedAnswers, { answerContent: newAnswer }]);
+      getAnswersList()
+
     } catch (error) {
       console.error(error);
     }
+  };
+
+  const onCancel = () => {
+    setNewAnswer("");
   };
 
   return (
@@ -75,7 +86,7 @@ function Answers() {
             onChange={(e) => setNewAnswer(e.target.value)}
           />
           <div className="answers__buttons-container">
-            <button className="answers__buttons">Cancel</button>
+            <button className="answers__buttons" onClick={onCancel}>Cancel</button>
             <button className="answers__buttons" onClick={onPostAnswer}>Post</button>
           </div>
         </div>
@@ -84,8 +95,8 @@ function Answers() {
       {answersWithUsers.map(({ answer, user, profilePhoto, createdAt }) => (
         <div key={answer.id} className="answers__container">
           <div className="answers__user">
-            <img src={profilePhoto} alt="🙃" className="answers__avatar" />
-            <p className="answers__user-name"> {user ? user : 'Unknown User'} </p>
+            <img src={profilePhoto} alt="Profile Picture" className="answers__avatar" onError={(e) => { e.target.onerror = null; e.target.src = '❤️'; e.target.alt = ''}} />
+            <p className="answers__user-name"> {user !== null && user !== '' ? user : 'Anonymous'} </p>
             <p>• {createdAt}</p>
           </div>
           <p>{answer.answerContent}</p>
