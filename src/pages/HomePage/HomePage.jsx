@@ -1,3 +1,4 @@
+import Questions from "../../components/Questions/Questions"
 import "./HomePage.scss";
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
