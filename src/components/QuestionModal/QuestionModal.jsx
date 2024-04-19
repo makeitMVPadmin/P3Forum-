@@ -4,20 +4,20 @@ import React, { useState } from "react";
 import "./QuestionModal.scss";
 
 
-const QuestionModal = ({ onClose, isModalOpen, setNewTopic, setNewQuestion, setPostModal, onSubmitQuestion }) => {
-  const [topic, setTopic] = useState("");
-  const [description, setDescription] = useState("");
+const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestion, setNewQuestion, onSubmitQuestion }) => {
+  // const [topic, setTopic] = useState("");
+  // const [description, setDescription] = useState("");
   const [topicError, setTopicError] = useState(false);
 
   const handleSubmit = () => {
-    if (topic.trim() === "" || description.trim() === "") {
+    if (newTopic.trim() === "" || newQuestion.trim() === "") {
       setTopicError(true);
       return;
     }
 
     onSubmitQuestion();
-    setTopic("");
-    setDescription("");
+    setNewTopic("");
+    setNewQuestion("");
     setTopicError(false);
   };
 
@@ -35,9 +35,9 @@ const QuestionModal = ({ onClose, isModalOpen, setNewTopic, setNewQuestion, setP
                 className={`question-modal__topic ${topicError ? "error" : ""}`}
                 type="text"
                 placeholder="Title"
-                value={topic}
+                value={newTopic}
                 onChange={(e) => {
-                  setTopic(e.target.value);
+                  setNewTopic(e.target.value);
                   setTopicError(false); 
                 }}
               />
@@ -46,8 +46,8 @@ const QuestionModal = ({ onClose, isModalOpen, setNewTopic, setNewQuestion, setP
                 className={`question-modal__description ${topicError ? "error" : ""}`}
                 type="text"
                 placeholder="Description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                value={newQuestion}
+                onChange={(e) => setNewQuestion(e.target.value)}
               />
               <div className="question-modal__form--buttons">
                 <button className="question-modal__cancel--button" onClick={onClose}>Cancel</button>
