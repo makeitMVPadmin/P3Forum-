@@ -1,9 +1,7 @@
 import "./HomePage.scss";
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
-import firebase from 'firebase/app';
-import { addDoc, Timestamp } from "firebase/firestore";
-// import Answers from "../../components/Answers/Answers";
+import Answers from "../../components/Answers/Answers";
 import AskQuestion from "../../components/AskQuestion/AskQuestion";
 import QuestionModal from "../../components/QuestionModal/QuestionModal";
 import PostModal from "../../components/PostModal/PostModal";
@@ -51,6 +49,7 @@ const onSubmitQuestion = async () => {
 
   return (
     <div className="home">
+
       <AskQuestion openModal={openModal} />
       {/* <Answers /> */}
       {isModalOpen && (
@@ -65,6 +64,9 @@ const onSubmitQuestion = async () => {
         />
       )}
       {isPostModal && <PostModal closePost={closePost} />}
+
+      <Answers />
+
     </div>
   );
 };

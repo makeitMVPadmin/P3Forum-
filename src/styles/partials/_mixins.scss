@@ -1,6 +1,7 @@
 @use "./_variables" as *;
 @use "./_typography" as *;
 
+
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {
     @content;

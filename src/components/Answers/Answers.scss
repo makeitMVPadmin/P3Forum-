@@ -1,0 +1,71 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+
+$font-stack-corban: 'Corben', serif;
+$font-stack-gilroy-lt: 'Gilroy-Light', serif;
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+
+.answers {
+  font: 100% $font-stack-gilroy-lt;
+  color: $s-black;
+  border: red solid 2px;
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__form-container {
+    display: flex;
+    justify-content: center;
+    width: 750px;
+  }
+
+  &__input {
+    border: none;
+    height: 75px;
+    margin: 5px;
+  }
+
+  &__form {
+    border: grey solid 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    margin: 15px;
+    width: 600px;
+  }
+
+  &__buttons-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__buttons {
+    background: #FFF;
+    border: 1px solid #828282;
+    border-radius: 10px;
+    height: 40px;
+    margin: 10px;
+    width: 75px;
+  }
+
+  &__container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    border-top: grey solid 1px;
+  }
+
+  &__avatar {
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  &__user-name {
+    margin-right: 10px;
+  }
+}
