@@ -9,6 +9,8 @@ import './QuestionCard.scss'
 const QuestionCard = ({ communityID, createdAt, downVotes, questionContent,
   topic, upVotes, userID, user }) => {
 
+    const { timestamp } = useGlobalContext()
+
   const { fullName, profilePhoto } = user 
     console.log(user)
   return (
