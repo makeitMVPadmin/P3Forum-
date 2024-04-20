@@ -12,44 +12,44 @@ const QuestionCard = ({ communityID, createdAt, downVotes, questionContent,
   const { fullName, profilePhoto } = user 
     console.log(user)
   return (
-    <section className='asked-question'>
-      <div className='asked-question__container'>
-        <div className='asked-question__user-details'>
-          <div className='asked-question__avatar-container'>
-            <img className='asked-question__avatar' src={profilePhoto} alt="test" />
+    <section className='question-card'>
+      <div className='question-card__container'>
+        <div className='question-card__user-details'>
+          <div className='question-card__avatar-container'>
+            <img className='question-card__avatar' src={profilePhoto} alt="test" />
           </div>
-          <h2 className='asked-question__text'>{fullName}</h2>
-          <h2 className='asked-question__text'>•</h2>
-          <h2 className='asked-question__text'>5min</h2>
+          <h2 className='question-card__text'>{fullName}</h2>
+          <h2 className='question-card__text'>•</h2>
+          <h2 className='question-card__text'>5min</h2>
         </div>
-        <div className='asked-question__body'>
-          <h2 className='asked-question__topic'>{topic}</h2>
-          <h2 className='asked-question__content'>{questionContent}</h2>
+        <div className='question-card__body'>
+          <h2 className='question-card__topic'>{topic}</h2>
+          <h2 className='question-card__content'>{questionContent}</h2>
         </div>
-        <div className='asked-question__actions'>
-          <div className='asked-question__button-container'>
-            <button className='asked-question__button'>
-              <img className='asked-question__upvote' src={upvote} alt="test" />
+        <div className='question-card__actions'>
+          <div className='question-card__button-container'>
+            <button className='question-card__button'>
+              <img className='question-card__upvote' src={upvote} alt="test" />
             </button>
-            <p className='asked-question__value'>{upVotes}</p>
+            <p className='question-card__value'>{upVotes}</p>
           </div>
-          <div className='asked-question__button-container'>
-            <button className='asked-question__button'>
-              <img className='asked-question__downvote' src={downvote} alt="test" />
+          <div className='question-card__button-container'>
+            <button className='question-card__button'>
+              <img className='question-card__downvote' src={downvote} alt="test" />
             </button>
-            <p className='asked-question__value'>{downVotes}</p>
+            <p className='question-card__value'>{downVotes}</p>
           </div>
-          <div className='asked-question__button-container'>
-            <button className='asked-question__button'>
-              <img className='asked-question__comment' src={comment} alt="test" />
+          <div className='question-card__button-container'>
+            <button className='question-card__button'>
+              <img className='question-card__comment' src={comment} alt="test" />
             </button>
-            <p className='asked-question__value'>0</p>
+            <p className='question-card__value'>0</p>
           </div>
-          <div className='asked-question__button-container'>
-            <button className='asked-question__button'>
-              <img className='asked-question__share' src={share} alt="test" />
+          <div className='question-card__button-container'>
+            <button className='question-card__button'>
+              <img className='question-card__share' src={share} alt="test" />
             </button>
-            <p className='asked-question__value'>0</p>
+            <p className='question-card__value'>0</p>
           </div>
         </div>
         <Answers/>
