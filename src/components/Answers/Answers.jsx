@@ -20,7 +20,7 @@ function Answers({ questionID }) {
 
   const filteredAnswerArray = answersList.filter(answer => answer.questionID === questionID);
 
-  const answersWithUsers = filteredAnswerArray.map(answer => {
+  const answersWithUsers = filteredAnswerArray.sort((a,b) => b.createdAt - a.createdAt).map(answer => {
     const user = userList.find(user => user.userID === answer.userID);
     const date = new Date(answer.createdAt.seconds * 1000); 
     const formattedDate = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
