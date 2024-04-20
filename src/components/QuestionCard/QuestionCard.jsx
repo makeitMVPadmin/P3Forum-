@@ -7,9 +7,11 @@ import upvote from '../../assets/upvote.svg'
 import './QuestionCard.scss'
 
 const QuestionCard = ({ communityID, createdAt, downVotes, questionContent,
-  topic, upVotes, userID, user }) => {
+  topic, upVotes, userID }) => {
 
-    const { timestamp } = useGlobalContext()
+    const { userList, timestamp } = useGlobalContext()
+
+    const user = userList.find(user => user.userID === userID)
 
   const { fullName, profilePhoto } = user 
     console.log(user)
