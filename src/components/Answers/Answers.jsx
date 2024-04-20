@@ -89,7 +89,7 @@ function Answers() {
       {answersWithUsers.map(({ answer, user, profilePhoto, createdAt }) => (
         <div key={answer.id} className="answers__container">
           <div className="answers__user">
-            <img src={profilePhoto} alt="Profile Picture" className="answers__avatar" onError={(e) => { e.target.onerror = null; e.target.src = '❤️'; e.target.alt = ''}} />
+            <img src={profilePhoto} alt="Profile Pic" className="answers__avatar" onError={(e) => { e.target.onerror = null; e.target.src = '❤️'; e.target.alt = ''}} />
             <p className="answers__user-name"> {user !== null && user !== '' ? user : 'Anonymous'} </p>
             <p>• {createdAt}</p>
           </div>
