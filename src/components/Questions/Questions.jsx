@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useGlobalContext } from "../../context.jsx";
-import AskedQuestion from "../../components/AskedQuestion/AskedQuestion";
+import QuestionCard from "../../components/QuestionCard/QuestionCard";
 import './Questions.scss'
 
 const Questions = () => {
@@ -16,7 +16,7 @@ const Questions = () => {
           topic, upVotes, userID } = question
 
    return (
-     <AskedQuestion
+     <QuestionCard
        communityID={communityID}
        createdAt={createdAt}
        downVotes={downVotes}
@@ -34,7 +34,7 @@ const Questions = () => {
    const { id, communityID, createdAt, downVotes, questionContent,
       topic, upVotes, userID } = question
    return (
-     <AskedQuestion
+     <QuestionCard
        communityID={communityID}
        createdAt={createdAt}
        downVotes={downVotes}
