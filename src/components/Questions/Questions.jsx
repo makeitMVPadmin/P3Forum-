@@ -6,7 +6,8 @@ const Questions = () => {
 
   const { questionsList } = useGlobalContext();
 
-  const questions = questionsList.map(question => {
+  const questions = questionsList.sort((a,b) => b.createdAt - a.createdAt)
+  .map(question => {
     const { id, createdAt, downVotes, questionContent,
         topic, upVotes, userID } = question
 
