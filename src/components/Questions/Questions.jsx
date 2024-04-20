@@ -20,6 +20,7 @@ const Questions = () => {
        topic={topic}
        upVotes={upVotes}
        userID={userID}
+       questionID={id}
        key={id}
      />
    )

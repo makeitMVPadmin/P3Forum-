@@ -7,7 +7,7 @@ import upvote from '../../assets/upvote.svg'
 import './QuestionCard.scss'
 
 const QuestionCard = ({ communityID, createdAt, downVotes, questionContent,
-  topic, upVotes, userID }) => {
+  questionID, topic, upVotes, userID }) => {
 
     const { userList, timestamp } = useGlobalContext()
 
@@ -56,7 +56,7 @@ const QuestionCard = ({ communityID, createdAt, downVotes, questionContent,
             <p className='question-card__value'>0</p>
           </div>
         </div>
-        <Answers/>
+        <Answers questionID={questionID}/>
       </div>
     </section>
   )

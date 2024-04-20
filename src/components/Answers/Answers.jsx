@@ -3,7 +3,7 @@ import { useGlobalContext } from "../../context";
 import { addDoc } from "firebase/firestore";
 import "./Answers.scss";
 
-function Answers() {
+function Answers({ questionID }) {
   const {
     userList,
     // questionsList,
@@ -18,7 +18,7 @@ function Answers() {
   const [newAnswer, setNewAnswer] = useState("");
   const [postedAnswers, setPostedAnswers] = useState([]);
 
-  const filteredAnswerArray = answersList.filter(answer => answer.questionID === "1PBuOCLfLUfPoInfVIwt");
+  const filteredAnswerArray = answersList.filter(answer => answer.questionID === questionID);
 
   const answersWithUsers = filteredAnswerArray.map(answer => {
     const user = userList.find(user => user.userID === answer.userID);
