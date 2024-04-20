@@ -6,15 +6,15 @@ import share from '../../assets/share.svg'
 import upvote from '../../assets/upvote.svg'
 import './QuestionCard.scss'
 
-const QuestionCard = ({ communityID, createdAt, downVotes, questionContent,
+const QuestionCard = ({ createdAt, downVotes, questionContent,
   questionID, topic, upVotes, userID }) => {
 
-    const { userList, timestamp } = useGlobalContext()
-
+    const { userList } = useGlobalContext()
     const user = userList.find(user => user.userID === userID)
+    const { fullName, profilePhoto } = user
+    const date = new Date(createdAt.seconds * 1000);
+    const formattedDate = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 
-  const { fullName, profilePhoto } = user 
-    console.log(user)
   return (
     <section className='question-card'>
       <div className='question-card__container'>
@@ -24,7 +24,7 @@ const QuestionCard = ({ communityID, createdAt, downVotes, questionContent,
           </div>
           <h2 className='question-card__text'>{fullName}</h2>
           <h2 className='question-card__text'>•</h2>
-          <h2 className='question-card__text'>5min</h2>
+          <h2 className='question-card__text'>{formattedDate}</h2>
         </div>
         <div className='question-card__body'>
           <h2 className='question-card__topic'>{topic}</h2>
