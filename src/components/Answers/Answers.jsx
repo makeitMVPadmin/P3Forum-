@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
-import { addDoc, Timestamp } from "firebase/firestore";
+import { addDoc } from "firebase/firestore";
 import "./Answers.scss";
 
 function Answers() {
@@ -11,7 +11,8 @@ function Answers() {
     // setAnswersList,
     answersCollection,
     getAnswersList,
-    randomUser1
+    randomUser1,
+    timestamp
   } = useGlobalContext();
 
   const [newAnswer, setNewAnswer] = useState("");
@@ -45,11 +46,6 @@ function Answers() {
         alert("You have already posted this answer.")
         return;
       }
-
-      const currentDate = new Date();
-      const timeZoneOffsetInMilliseconds = -6 * 60 * 60 * 1000;
-      const adjustedDate = new Date(currentDate.getTime() + timeZoneOffsetInMilliseconds);
-      const timestamp = Timestamp.fromDate(adjustedDate);
 
       await addDoc(answersCollection, {
         answerContent: newAnswer,

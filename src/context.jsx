@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { database } from "./config/firebase";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, Timestamp } from "firebase/firestore";
 
 const AppContext = React.createContext();
 
@@ -54,6 +54,11 @@ const AppProvider = ({ children }) => {
         }
     };
 
+    const currentDate = new Date();
+      const timeZoneOffsetInMilliseconds = -6 * 60 * 60 * 1000;
+      const adjustedDate = new Date(currentDate.getTime() + timeZoneOffsetInMilliseconds);
+      const timestamp = Timestamp.fromDate(adjustedDate);
+
     const randomUser = () => {
         return userList[Math.floor(Math.random() * userList.length)];
     }
@@ -79,7 +84,8 @@ const AppProvider = ({ children }) => {
                 getQuestionsList,
                 getAnswersList, 
                 randomUser1,
-                randomUser2,          
+                randomUser2,  
+                timestamp        
             }}>
                 {children}
         </AppContext.Provider>
