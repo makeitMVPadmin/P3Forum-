@@ -8,8 +8,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 .answers {
   font: 100% $font-stack-gilroy-lt;
   color: $s-black;
-  border: red solid 2px;
-  width: 750px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +16,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
   &__form-container {
     display: flex;
     justify-content: center;
-    width: 750px;
+    width: 90%;
   }
 
   &__input {

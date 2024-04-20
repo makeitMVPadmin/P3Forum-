@@ -48,6 +48,7 @@ const AppProvider = ({ children }) => {
             ...doc.data(),
             id: doc.id,
         }));
+        console.log({ filteredAnswersData });
         setAnswersList(filteredAnswersData);
         } catch (error) {
         console.error(error);
