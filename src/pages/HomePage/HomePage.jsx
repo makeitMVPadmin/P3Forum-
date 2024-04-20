@@ -1,6 +1,7 @@
 import "./HomePage.scss";
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
+import { addDoc } from "firebase/firestore";
 import Answers from "../../components/Answers/Answers";
 import AskQuestion from "../../components/AskQuestion/AskQuestion";
 import QuestionModal from "../../components/QuestionModal/QuestionModal";
