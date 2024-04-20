@@ -12,7 +12,7 @@ const Questions = () => {
  const user = userList.find(user => user.userID === question.userID)
     console.log(question)
  const questionTest = () => {
-   const { id, communityID, createdAt, downVotes, questionContent,
+   const { communityID, createdAt, downVotes, questionContent,
           topic, upVotes, userID } = question
 
    return (
@@ -25,13 +25,13 @@ const Questions = () => {
        upVotes={upVotes}
        userID={userID}
        user={user}
-       key={id}
+       key={userID}
      />
    )
  }
  
  const questions = questionsList.map(question => {
-   const { id, communityID, createdAt, downVotes, questionContent,
+   const { communityID, createdAt, downVotes, questionContent,
       topic, upVotes, userID } = question
    return (
      <QuestionCard
@@ -43,15 +43,15 @@ const Questions = () => {
        upVotes={upVotes}
        userID={userID}
        user={user}
-       key={id}
+       key={userID}
      />
    )
  })
 
   return (
     <>
-      {/* {questions && questions } */}
-      { question && questionTest() }
+      {questions && questions }
+      {/* { question && questionTest() } */}
     </>
   )
 }
