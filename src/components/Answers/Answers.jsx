@@ -40,18 +40,12 @@ function Answers({ questionID }) {
         alert("Please enter a valid answer.")
         return;
       }
-  
-      if (postedAnswers.some(answer => answer === newAnswer)) {
-        console.log("You have already posted this answer.");
-        alert("You have already posted this answer.")
-        return;
-      }
 
       await addDoc(answersCollection, {
         answerContent: newAnswer,
         createdAt: timestamp,
-        questionID: "1PBuOCLfLUfPoInfVIwt", //Needs to be changed to be dynamic
-        userID: randomUser1.id, //Needs to be made dynamic
+        questionID: questionID,
+        userID: randomUser1.id,
         upVotes: 0,
         downVotes: 0
       });
@@ -65,7 +59,8 @@ function Answers({ questionID }) {
     }
   };
 
-  const onCancel = () => {
+  const onCancel = (e) => {
+    e.preventDefault()
     setNewAnswer("");
   };
 
@@ -80,7 +75,7 @@ function Answers({ questionID }) {
             onChange={(e) => setNewAnswer(e.target.value)}
           />
           <div className="answers__buttons-container">
-            <button className="answers__buttons" onClick={onCancel}>Cancel</button>
+            <button className="answers__buttons" onClick={(e) => onCancel(e)}>Cancel</button>
             <button className="answers__buttons" onClick={onPostAnswer}>Post</button>
           </div>
         </div>
