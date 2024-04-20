@@ -4,9 +4,9 @@ import comment from '../../assets/comment.svg'
 import downvote from '../../assets/downvote.svg'
 import share from '../../assets/share.svg'
 import upvote from '../../assets/upvote.svg'
-import './AskedQuestion.scss'
+import './QuestionCard.scss'
 
-const AskedQuestion = ({ communityID, createdAt, downVotes, questionContent,
+const QuestionCard = ({ communityID, createdAt, downVotes, questionContent,
   topic, upVotes, userID, user }) => {
 
   const { fullName, profilePhoto } = user 
@@ -58,4 +58,4 @@ const AskedQuestion = ({ communityID, createdAt, downVotes, questionContent,
   )
 }
 
-export default AskedQuestion
+export default QuestionCard
