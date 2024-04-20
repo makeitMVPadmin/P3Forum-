@@ -5,15 +5,13 @@ import './Questions.scss'
 const Questions = () => {
 
   const { questionsList } = useGlobalContext();
-  
 
- const questions = questionsList.map(question => {
-   const { id, communityID, createdAt, downVotes, questionContent,
-      topic, upVotes, userID } = question
+  const questions = questionsList.map(question => {
+    const { id, createdAt, downVotes, questionContent,
+        topic, upVotes, userID } = question
 
    return (
      <QuestionCard
-       communityID={communityID}
        createdAt={createdAt}
        downVotes={downVotes}
        questionContent={questionContent}
@@ -29,7 +27,6 @@ const Questions = () => {
   return (
     <>
       {questions && questions }
-      {/* { question && questionTest() } */}
     </>
   )
 }
