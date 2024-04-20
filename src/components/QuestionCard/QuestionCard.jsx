@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useGlobalContext } from "../../context.jsx";
 import Answers from '../Answers/Answers'
 import comment from '../../assets/comment.svg'
@@ -14,6 +15,13 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
     const { fullName, profilePhoto } = user
     const date = new Date(createdAt.seconds * 1000);
     const formattedDate = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+
+    const [showAnswers, setShowAnswers] = useState(false)
+
+    const toggleAnswers = (e) => {
+      e.preventDefault()
+      setShowAnswers(!showAnswers)
+    }
 
   return (
     <section className='question-card'>
@@ -44,7 +52,7 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
             <p className='question-card__value'>{downVotes}</p>
           </div>
           <div className='question-card__button-container'>
-            <button className='question-card__button'>
+            <button onClick={(e)=> toggleAnswers(e)} className='question-card__button'>
               <img className='question-card__comment' src={comment} alt="test" />
             </button>
             <p className='question-card__value'>0</p>
@@ -56,7 +64,7 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
             <p className='question-card__value'>0</p>
           </div>
         </div>
-        <Answers questionID={questionID}/>
+        { showAnswers && <Answers questionID={questionID}/> }
       </div>
     </section>
   )
