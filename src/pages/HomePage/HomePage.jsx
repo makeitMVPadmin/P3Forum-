@@ -1,4 +1,3 @@
-import AskedQuestion from "../../components/AskedQuestion/AskedQuestion";
 import "./HomePage.scss";
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
@@ -7,6 +6,7 @@ import Answers from "../../components/Answers/Answers";
 import AskQuestion from "../../components/AskQuestion/AskQuestion";
 import QuestionModal from "../../components/QuestionModal/QuestionModal";
 import PostModal from "../../components/PostModal/PostModal";
+import AskedQuestion from "../../components/AskedQuestion/AskedQuestion";
 
 const Home = () => {
 
