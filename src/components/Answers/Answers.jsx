@@ -6,9 +6,7 @@ import "./Answers.scss";
 function Answers({ questionID }) {
   const {
     userList,
-    // questionsList,
     answersList,
-    // setAnswersList,
     answersCollection,
     getAnswersList,
     randomUser1,

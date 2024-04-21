@@ -2,6 +2,7 @@ import React from 'react';
 import "./AskQuestion.scss";
 
 const AskQuestion = ({openModal}) => {
+
     return (
         <div className='ask-question__container'>
             <div className='ask-question__profile--img'></div>

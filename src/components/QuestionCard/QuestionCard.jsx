@@ -30,7 +30,7 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
           <div className='question-card__avatar-container'>
             <img className='question-card__avatar' src={profilePhoto} alt="test" />
           </div>
-          <h2 className='question-card__text'>{fullName}</h2>
+          <h2 className='question-card__text'>{fullName !== null && fullName !== '' ? fullName : 'Anonymous'}</h2>
           <h2 className='question-card__text'>•</h2>
           <h2 className='question-card__text'>{formattedDate}</h2>
         </div>
