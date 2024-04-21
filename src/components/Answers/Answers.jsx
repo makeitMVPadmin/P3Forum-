@@ -60,7 +60,6 @@ function Answers({ questionID }) {
   };
 
   const onCancel = (e) => {
-    e.preventDefault()
     setNewAnswer("");
   };
 
@@ -73,9 +72,10 @@ function Answers({ questionID }) {
             className="answers__input"
             placeholder="Answer..."
             onChange={(e) => setNewAnswer(e.target.value)}
+            value={newAnswer}
           />
           <div className="answers__buttons-container">
-            <button className="answers__buttons" onClick={(e) => onCancel(e)}>Cancel</button>
+            <button className="answers__buttons" onClick={onCancel}>Cancel</button>
             <button className="answers__buttons" onClick={onPostAnswer}>Post</button>
           </div>
         </div>
