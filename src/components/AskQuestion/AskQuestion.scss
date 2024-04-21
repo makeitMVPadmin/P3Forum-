@@ -16,7 +16,6 @@ background: #FFF;
 .ask-question__profile--img {
 width: 2.8rem;
 height: 2.8rem;
-background-color: #1E1E1E;
 border-radius: 50%;
 }
 
@@ -30,4 +29,8 @@ letter-spacing: -0.349px;
 border: none;
 border-radius: 10px;
 background-color: #ededed;
+}
+
+.ask-question__button:hover {
+  cursor: pointer;
 }

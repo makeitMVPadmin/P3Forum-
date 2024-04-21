@@ -33,10 +33,6 @@
 
   &__text {
     margin-right: 10px;
-  } 
-
-  &__body {
-    
   }
 
   &__actions {
@@ -55,6 +51,10 @@
     border: none;
     background-color: #FFF;
     padding: 0;
+  }
+
+  &__button:hover {
+    cursor: pointer;
   }
 
   &__upvote,

@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../../context.jsx";
+import { useGlobalContext } from "../../context";
 import QuestionCard from "../../components/QuestionCard/QuestionCard";
 import './Questions.scss'
 
