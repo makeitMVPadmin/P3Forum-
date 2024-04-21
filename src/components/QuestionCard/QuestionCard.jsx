@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useGlobalContext } from "../../context.jsx";
+import { useGlobalContext } from "../../context";
 import Answers from '../Answers/Answers'
 import comment from '../../assets/comment.svg'
 import downvote from '../../assets/downvote.svg'
@@ -29,7 +29,7 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
       <div className='question-card__container'>
         <div className='question-card__user-details'>
           <div className='question-card__avatar-container'>
-            <img className='question-card__avatar' src={profilePhoto ? profilePhoto : defaultUser} alt="test" />
+            <img className='question-card__avatar' src={profilePhoto ? profilePhoto : defaultUser} alt="Profile pic" />
           </div>
           <h2 className='question-card__text'>{fullName !== null && fullName !== '' ? fullName : 'Anonymous'}</h2>
           <h2 className='question-card__text'>•</h2>
