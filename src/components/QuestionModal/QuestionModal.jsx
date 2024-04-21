@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useGlobalContext } from "../../context";
 import "./QuestionModal.scss";
 
 
 const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestion, setNewQuestion, onSubmitQuestion }) => {
   const [topicError, setTopicError] = useState(false);
+
+  const { getQuestionsList } = useGlobalContext()
 
   const handleSubmit = () => {
     if (newTopic.trim() === "" || newQuestion.trim() === "") {
@@ -15,6 +18,7 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
     setNewTopic("");
     setNewQuestion("");
     setTopicError(false);
+    getQuestionsList()
   };
 
   return (

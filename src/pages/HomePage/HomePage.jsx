@@ -19,24 +19,19 @@ const Home = () => {
   const [newTopic, setNewTopic] = useState("");
   const [newQuestion, setNewQuestion] = useState("");
 
-const onSubmitQuestion = async () => {
-  const time = Date.now();
-  
-  // firebase.database().ref('-default-/data/~2FQuestions').set({
-  //   timestamp: time
-  // });
+  const {timestamp, randomUser2} = useGlobalContext()
 
+const onSubmitQuestion = async () => {
   try {
     await addDoc(questionsCollection, {
       topic: newTopic,
-      content: newQuestion,
+      questionContent: newQuestion,
       communityID: null,
       downVotes: 0,
       upVotes: 0,
-      // createdAt: new Date(time).toLocaleString('en-US', { timeZone: 'UTC' })
-      createdAt: time
+      createdAt: timestamp,
+      userID: randomUser2.userID
     });
-
 
     closeModal();
     setPostModal(true);
