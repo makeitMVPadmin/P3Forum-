@@ -5,6 +5,7 @@ import comment from '../../assets/comment.svg'
 import downvote from '../../assets/downvote.svg'
 import share from '../../assets/share.svg'
 import upvote from '../../assets/upvote.svg'
+import defaultUser from '../../assets/icons/defaultUser.svg'
 import './QuestionCard.scss'
 
 const QuestionCard = ({ createdAt, downVotes, questionContent,
@@ -28,7 +29,7 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
       <div className='question-card__container'>
         <div className='question-card__user-details'>
           <div className='question-card__avatar-container'>
-            <img className='question-card__avatar' src={profilePhoto} alt="test" />
+            <img className='question-card__avatar' src={profilePhoto ? profilePhoto : defaultUser} alt="test" />
           </div>
           <h2 className='question-card__text'>{fullName !== null && fullName !== '' ? fullName : 'Anonymous'}</h2>
           <h2 className='question-card__text'>•</h2>
