@@ -1,4 +1,3 @@
-import "./HomePage.scss";
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
 import { addDoc } from "firebase/firestore";
@@ -6,9 +5,8 @@ import AskQuestion from "../../components/AskQuestion/AskQuestion";
 import QuestionModal from "../../components/QuestionModal/QuestionModal";
 import PostModal from "../../components/PostModal/PostModal";
 import Questions from "../../components/Questions/Questions"
-import Sidebar from "../../components/Sidebar/Sidebar";
 
-const Home = () => {
+const AskQuestionsContainer = () => {
 
   const [isModalOpen, setModalOpen] = useState(false);
   const [isPostModal, setPostModal] = useState(false);
@@ -45,11 +43,9 @@ const onSubmitQuestion = async () => {
 };
 
   return (
-    <div className="home">
-      <Sidebar />
-      <section className="home-body">
+    <div className="askQuestionsContainer">
+
       <AskQuestion openModal={openModal} />
-      {/* <Answers /> */}
       {isModalOpen && (
         <QuestionModal
           onClose={closeModal}
@@ -64,9 +60,9 @@ const onSubmitQuestion = async () => {
       {isPostModal && <PostModal closePost={closePost} />}
 
       <Questions />
-      </section>
+
     </div>
   );
 };
 
-export default Home;
+export default AskQuestionsContainer;

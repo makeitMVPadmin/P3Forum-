@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../src/pages/HomePage/HomePage";
+import Home from "./pages/ForumHomePage/ForumHomePage";
 
 function App() {
   return (
