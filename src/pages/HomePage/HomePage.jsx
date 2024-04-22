@@ -6,6 +6,7 @@ import AskQuestion from "../../components/AskQuestion/AskQuestion";
 import QuestionModal from "../../components/QuestionModal/QuestionModal";
 import PostModal from "../../components/PostModal/PostModal";
 import Questions from "../../components/Questions/Questions"
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 const Home = () => {
 
@@ -45,7 +46,8 @@ const onSubmitQuestion = async () => {
 
   return (
     <div className="home">
-
+      <Sidebar />
+      <section className="home-body">
       <AskQuestion openModal={openModal} />
       {/* <Answers /> */}
       {isModalOpen && (
@@ -62,7 +64,7 @@ const onSubmitQuestion = async () => {
       {isPostModal && <PostModal closePost={closePost} />}
 
       <Questions />
-
+      </section>
     </div>
   );
 };
