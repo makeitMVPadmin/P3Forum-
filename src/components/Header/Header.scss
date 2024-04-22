@@ -2,7 +2,6 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
-// $font-stack-gilroy-lt: 'Gilroy-Light', serif;
 $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
 .header {
@@ -65,27 +64,4 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
   &__down-carrot {
     height: 1.5vh;
   }
-
-  // &__button {
-  //   width: 42px;
-  //   height: 42px;
-  //   border: none;
-  //   background-color: #FFF;
-  //   padding: 0;
-  // }
-
-  // &__button:hover {
-  //   cursor: pointer;
-  // }
-
-  // &__upvote,
-  // &__downvote,
-  // &__comment,
-  // &__share {
-  //   height: 30px;
-  // }
-
-  // &__value {
-  //   margin-right: 10px;
-  // }
 }
