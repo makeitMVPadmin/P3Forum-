@@ -14,9 +14,6 @@ const Header = () => {
     randomUser2,
   } = useGlobalContext();
 
-  console.log(randomUser2?.profilePhoto)
-
-
   return (
     <div className="header">
       <div className="header__navigation">

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../../context";
+import defaultUser from "../../assets/icons/defaultUser.svg"
 import "./QuestionModal.scss";
 
 
 const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestion, setNewQuestion, onSubmitQuestion }) => {
   const [topicError, setTopicError] = useState(false);
 
-  const { getQuestionsList } = useGlobalContext()
+  const { getQuestionsList, randomUser2 } = useGlobalContext()
 
   const handleSubmit = () => {
     if (newTopic.trim() === "" || newQuestion.trim() === "") {
@@ -27,7 +28,7 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
         <div className="question-modal--overlay">
           <div className="question-modal__container">
             <button className="close-button" onClick={onClose}>X</button>
-            <div className="question-modal__profile--img"></div>
+            <img src={randomUser2?.profilePhoto ? randomUser2?.profilePhoto : defaultUser} alt="Profile Pic" className="question-modal__profile--img"/>
 
             <div className="question-modal__form">
               <input
