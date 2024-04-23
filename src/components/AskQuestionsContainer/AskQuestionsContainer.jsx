@@ -59,7 +59,7 @@ const onSubmitQuestion = async () => {
       )}
       {isPostModal && <PostModal closePost={closePost} />}
 
-      <Questions />
+      {/* <Questions /> */}
 
     </div>
   );
