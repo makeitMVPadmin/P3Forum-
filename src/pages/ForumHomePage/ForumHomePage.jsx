@@ -7,7 +7,6 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 const Home = () => {
   return (
     <div className="home">
-      <Header />
       <Sidebar />
       <div className="home-body">
         <AskQuestionsContainer />
