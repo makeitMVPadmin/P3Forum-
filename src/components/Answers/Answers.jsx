@@ -8,6 +8,8 @@ import upvote from "../../assets/upvote.svg"
 import defaultUser from "../../assets/icons/defaultUser.svg"
 import "./Answers.scss";
 
+import UnsuccessfulPost from "../UnsuccessfulPost/UnsuccessfulPost";
+
 function Answers({ questionID }) {
   const {
     userList,
@@ -20,7 +22,9 @@ function Answers({ questionID }) {
 
   const [newAnswer, setNewAnswer] = useState("");
   const [postedAnswers, setPostedAnswers] = useState([]);
+  const [isErrorModal, setErrorModal] = useState(false);
 
+  const onClose = () => setErrorModal(false);
   const filteredAnswerArray = answersList.filter(answer => answer.questionID === questionID);
 
   const answersWithUsers = filteredAnswerArray.sort((a,b) => b.createdAt - a.createdAt).map(answer => {
@@ -40,7 +44,6 @@ function Answers({ questionID }) {
     try {
       if (!newAnswer.trim()) {
         console.log("Please enter a valid answer.");
-        alert("Please enter a valid answer.")
         return;
       }
       
@@ -59,6 +62,7 @@ function Answers({ questionID }) {
 
     } catch (error) {
       console.error(error);
+      setErrorModal(true);
     }
   };
 
@@ -80,7 +84,7 @@ function Answers({ questionID }) {
           />
           <div className="answers__buttons-container">
             <button className="answers__buttons" onClick={onCancel}>Cancel</button>
-            <button className="answers__buttons" onClick={onPostAnswer}>Post</button>
+            <button className="answers__buttons post" onClick={onPostAnswer}>Post</button>
           </div>
         </div>
       </div>
@@ -129,6 +133,7 @@ function Answers({ questionID }) {
           </div>
         </div>
       ))}
+      {isErrorModal && <UnsuccessfulPost onClose={onClose} />}
     </div>
   );
 }

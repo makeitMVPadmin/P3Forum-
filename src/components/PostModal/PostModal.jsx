@@ -15,7 +15,7 @@ const PostModal = ({ closePost }) => {
     return (
         <div className="post-modal--overlay">
         <div className="question-posted__popUp">
-            <img src={checked} alt="icon of post question sucessfully" />
+            <div className="question-posted__popUp--icon"><img className="question-posted__popUp--img" src={checked} alt="icon of post question sucessfully" /></div>
             <p className="post-modal__text">Posted successfully</p>
         </div>
         </div>

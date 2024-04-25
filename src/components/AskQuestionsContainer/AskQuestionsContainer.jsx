@@ -4,15 +4,18 @@ import { addDoc } from "firebase/firestore";
 import AskQuestion from "../../components/AskQuestion/AskQuestion";
 import QuestionModal from "../../components/QuestionModal/QuestionModal";
 import PostModal from "../../components/PostModal/PostModal";
-import Questions from "../../components/Questions/Questions"
+import Questions from "../../components/Questions/Questions";
+import UnsuccessfulPost from "../UnsuccessfulPost/UnsuccessfulPost";
 
 const AskQuestionsContainer = () => {
 
   const [isModalOpen, setModalOpen] = useState(false);
   const [isPostModal, setPostModal] = useState(false);
+  const [isErrorModal, setErrorModal] = useState(false);
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
   const closePost = () => setPostModal(false);
+  const onClose = () => setErrorModal(false);
 
   const { questionsCollection } = useGlobalContext();
   const [newTopic, setNewTopic] = useState("");
@@ -37,8 +40,7 @@ const onSubmitQuestion = async () => {
     
   } catch (error) {
     console.error(error);
-    alert("unsuccessfull post, please submit your question again");
-    return;
+    setErrorModal(true);
   }
 };
 
@@ -60,6 +62,9 @@ const onSubmitQuestion = async () => {
       )}
 
       {isPostModal && <PostModal closePost={closePost} />}
+      {isErrorModal && <UnsuccessfulPost onClose={onClose} />}
+
+
 
     </div>
   );
