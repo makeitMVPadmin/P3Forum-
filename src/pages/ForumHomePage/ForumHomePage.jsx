@@ -1,5 +1,4 @@
 import "./ForumHomePage.scss";
-import Header from "../../components/Header/Header"
 import Questions from "../../components/Questions/Questions"
 import AskQuestionsContainer from "../../components/AskQuestionsContainer/AskQuestionsContainer";
 import Sidebar from "../../components/Sidebar/Sidebar";
