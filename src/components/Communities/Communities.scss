@@ -1,0 +1,14 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+.communities {
+  border: 1px solid #000;
+
+  &__title {
+    text-align: center;
+    @include forum-textFormat(1.7rem);
+    letter-spacing: -0.349px;
+  }
+}
+
