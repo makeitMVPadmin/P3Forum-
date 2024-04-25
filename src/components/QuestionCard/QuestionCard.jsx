@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useGlobalContext } from "../../context";
 import Answers from '../Answers/Answers'
 import comment from '../../assets/comment.svg'
@@ -11,13 +11,20 @@ import './QuestionCard.scss'
 const QuestionCard = ({ createdAt, downVotes, questionContent,
   questionID, topic, upVotes, userID }) => {
 
-    const { userList } = useGlobalContext()
+    const { userList, answersList } = useGlobalContext()
     const user = userList.find(user => user.userID === userID)
     const { fullName, profilePhoto } = user
     const date = new Date(createdAt.seconds * 1000);
     const formattedDate = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 
     const [showAnswers, setShowAnswers] = useState(false)
+    const [answersCount, setAnswersCount] = useState(0);
+
+    useEffect(() => {
+      const filteredAnswerArray = answersList.filter((answer) => answer.questionID === questionID);
+      const count = filteredAnswerArray.length;
+      setAnswersCount(count);
+    }, [answersList, questionID]);
 
     const toggleAnswers = (e) => {
       e.preventDefault()
@@ -56,7 +63,7 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
             <button onClick={(e)=> toggleAnswers(e)} className='question-card__button'>
               <img className='question-card__comment' src={comment} alt="test" />
             </button>
-            <p className='question-card__value'>0</p>
+            <p className='question-card__value'>{answersCount}</p>
           </div>
           <div className='question-card__button-container'>
             <button className='question-card__button'>
