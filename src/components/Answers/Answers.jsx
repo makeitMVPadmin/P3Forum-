@@ -75,7 +75,7 @@ function Answers({ questionID }) {
       
       <div className="answers__form-container">
         <div className="answers__form">
-          <input
+          <textarea
             className="answers__input"
             placeholder="Write a comment..."
             type="text"
@@ -83,8 +83,8 @@ function Answers({ questionID }) {
             value={newAnswer}
           />
           <div className="answers__buttons-container">
-            <button className="answers__buttons" onClick={onCancel}>Cancel</button>
-            <button className="answers__buttons post" onClick={onPostAnswer}>Post</button>
+            <button className="answers__button-cancel" onClick={onCancel}>Cancel</button>
+            <button className="answers__button-post" onClick={onPostAnswer}>Post</button>
           </div>
         </div>
       </div>

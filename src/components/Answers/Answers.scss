@@ -32,18 +32,16 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
   
   &__input {
     border: none;
+    color: #3f3f3f;
+    font: 100% $font-stack-gilroy-lt;
+    font-size: 1.3rem;
     height: 25vh;
-    margin: 5px;
-    color: #9b9b9b;
-    top: 10px;
+    margin: 10px;
   }
 
   &__input::placeholder {  
     color: #9b9b9b;
     font-size: 1.3rem; 
-    position: absolute;
-    top: 10px;
-    left: 5px;
   }
 
   *:focus {
@@ -55,7 +53,8 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     justify-content: flex-end;
   }
 
-  &__buttons {
+  &__button-cancel,
+  &__button-post {
     background: #FFF;
     border: 2px solid #828282;
     border-radius: 10px;
@@ -66,7 +65,17 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     width: 7vw;
   }
 
-  &__buttons:hover {
+  &__button-post {
+    background-color: #FFD22F
+  }
+
+  &__button-cancel:hover {
+    background-color:#ce0606;
+    cursor: pointer;
+  }
+
+  &__button-post:hover {
+    background-color:#a58a27;
     cursor: pointer;
   }
 
