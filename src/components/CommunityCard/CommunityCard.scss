@@ -1,0 +1,35 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+.community-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 2.5rem 1rem 2.5rem;
+  margin: 0rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+  }
+
+  &__title {
+    @include forum-textFormat(0.9rem);
+    letter-spacing: -0.349px;
+    margin: 0.5rem;
+  }
+
+  &__favorite:hover {
+    cursor: pointer;
+  }
+}
