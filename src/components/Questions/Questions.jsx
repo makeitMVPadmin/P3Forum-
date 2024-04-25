@@ -1,9 +1,8 @@
 import { useGlobalContext } from "../../context";
-import QuestionCard from "../../components/QuestionCard/QuestionCard";
+import QuestionCard from "../QuestionCard/QuestionCard";
 import './Questions.scss'
 
 const Questions = () => {
-
   const { questionsList } = useGlobalContext();
 
   const questions = questionsList.sort((a,b) => b.createdAt - a.createdAt)

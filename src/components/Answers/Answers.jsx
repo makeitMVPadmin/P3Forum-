@@ -27,7 +27,7 @@ function Answers({ questionID }) {
     const user = userList.find(user => user.userID === answer.userID);
     const date = new Date(answer.createdAt.seconds * 1000); 
     const formattedDate = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-
+    
     return {
       answer: answer,
       user: user.fullName,
@@ -35,7 +35,7 @@ function Answers({ questionID }) {
       createdAt: formattedDate
     };
   });
-
+  
   const onPostAnswer = async () => {
     try {
       if (!newAnswer.trim()) {
@@ -43,7 +43,7 @@ function Answers({ questionID }) {
         alert("Please enter a valid answer.")
         return;
       }
-
+      
       await addDoc(answersCollection, {
         answerContent: newAnswer,
         createdAt: timestamp,
@@ -52,7 +52,7 @@ function Answers({ questionID }) {
         upVotes: 0,
         downVotes: 0
       });
-
+      
       setNewAnswer("");
       setPostedAnswers([...postedAnswers, { answerContent: newAnswer }]);
       getAnswersList()
@@ -84,7 +84,7 @@ function Answers({ questionID }) {
           </div>
         </div>
       </div>
-
+      {console.log(answersWithUsers.length)}
       {answersWithUsers.map(({ answer, user, profilePhoto, createdAt }) => (
         <div key={answer.id} className="answers__container">
 
