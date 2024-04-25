@@ -79,7 +79,7 @@ function Answers({ questionID }) {
           />
           <div className="answers__buttons-container">
             <button className="answers__buttons" onClick={onCancel}>Cancel</button>
-            <button className="answers__buttons" onClick={onPostAnswer}>Post</button>
+            <button className="answers__buttons post" onClick={onPostAnswer}>Post</button>
           </div>
         </div>
       </div>
