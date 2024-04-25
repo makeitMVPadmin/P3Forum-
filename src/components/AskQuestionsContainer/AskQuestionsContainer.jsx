@@ -62,7 +62,7 @@ const onSubmitQuestion = async () => {
       {isPostModal && <PostModal closePost={closePost} />}
       {isErrorModal && <UnsuccessfulPost onClose={onClose} />}
 
-      <Questions />
+      {/* <Questions /> */}
 
     </div>
   );

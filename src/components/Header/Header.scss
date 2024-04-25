@@ -1,0 +1,67 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+
+.header {
+  align-items: center;
+  border-bottom: #000 solid 1px;
+  display: flex;
+  height: 13vh;
+  justify-content: space-between;
+  width: 100%;
+
+
+  &__navigation {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+    }
+
+  &__main-icon {
+    margin-left: -25px;
+  }  
+
+  &__main-image {
+    height: 5vh;
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__images {
+    height: 2.8vh;
+  }
+
+  &__icon-titles {
+    font: 100% $font-stack-gilroy-bl;
+    font-size: .8rem;
+  }
+
+  &__icon-titles-forum {
+    font: 100% $font-stack-gilroy-bl;
+    font-size: .8rem;
+    color: #0754b0;
+  }
+
+  &__user-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 7vw;
+  }
+
+  &__user-pic {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+
+  &__down-carrot {
+    height: 1.5vh;
+  }
+}
