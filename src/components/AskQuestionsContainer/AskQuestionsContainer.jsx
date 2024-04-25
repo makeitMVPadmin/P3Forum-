@@ -46,9 +46,8 @@ const onSubmitQuestion = async () => {
 
   return (
     <div className="askQuestionsContainer">
-
-      <AskQuestion openModal={openModal} />
-      {isModalOpen && (
+      
+      {isModalOpen ? (
         <QuestionModal
           onClose={closeModal}
           isModalOpen={isModalOpen}
@@ -58,11 +57,14 @@ const onSubmitQuestion = async () => {
           setNewQuestion={setNewQuestion}
           onSubmitQuestion={onSubmitQuestion}
         />
+      ) : (
+        <AskQuestion openModal={openModal} />
       )}
+
       {isPostModal && <PostModal closePost={closePost} />}
       {isErrorModal && <UnsuccessfulPost onClose={onClose} />}
 
-      {/* <Questions /> */}
+
 
     </div>
   );

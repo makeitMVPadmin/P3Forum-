@@ -25,9 +25,9 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
   return (
     <>
       {isModalOpen && (
-        <div className="question-modal--overlay">
+        // <div className="question-modal--overlay">
           <div className="question-modal__container">
-            <button className="close-button" onClick={onClose}>X</button>
+          
             <img src={randomUser2?.profilePhoto ? randomUser2?.profilePhoto : defaultUser} alt="Profile Pic" className="question-modal__profile--img"/>
             <div className="question-modal__form">
               <input
@@ -55,7 +55,7 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
               </div>
             </div>
           </div>
-        </div>
+        // </div>
       )}
     </>
   );
