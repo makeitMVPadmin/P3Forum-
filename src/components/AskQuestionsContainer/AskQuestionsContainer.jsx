@@ -4,7 +4,6 @@ import { addDoc } from "firebase/firestore";
 import AskQuestion from "../../components/AskQuestion/AskQuestion";
 import QuestionModal from "../../components/QuestionModal/QuestionModal";
 import PostModal from "../../components/PostModal/PostModal";
-import Questions from "../../components/Questions/Questions";
 import UnsuccessfulPost from "../UnsuccessfulPost/UnsuccessfulPost";
 
 const AskQuestionsContainer = () => {
