@@ -1,15 +1,16 @@
+import star from "../../assets/icons/Favourite Commuinity.svg";
 
 const CommunityCard = () => {
   return (
-    <section>
-      <div className="topics-section__box">
-        <div className="topics-section__holder"> </div>
-        <p className="topics-section__title">{community}</p>
+    <section className="community-card">
+      <div className="community-card__container" >
+        <img src={star} alt="Community logo"/>
+        <p className="community-card__title">community</p>
       </div>
       <img
-        className="topics-section__fav"
+        className="community-card__favorite"
         src={star}
-        alt="start icon represent how users like this topic"
+        alt="Star icon"
       />
     </section>
   )
