@@ -3,12 +3,12 @@ import './Communities.scss'
 
 const Communities = () => {
 
-  const commmunityList = 
+  // const commmunityList = 
 
 
   return (
     <section className='communities'>
-      <h2 className='communities-title'>Community</h2>
+      <h2 className='communities__title'>Communities</h2>
     </section>
   )
 }
