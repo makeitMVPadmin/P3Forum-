@@ -2,9 +2,11 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
 .topics-title {
   text-align: center;
-  @include forum-textFormat(1.7rem);
+  font: 100% $font-stack-gilroy-bl;
+  font-size: 1.6rem;
   letter-spacing: -0.349px;
 }

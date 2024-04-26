@@ -1,6 +1,15 @@
-.home{
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+// $font-stack-corban: 'Corben', serif;
+$font-stack-gilroy-lt: 'Gilroy-Light', serif;
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+
+.home {
     display: flex;
     flex-direction: row;
+    font: 100% $font-stack-gilroy-bl;
     justify-content: space-between;
     background: #BFE5FF;
 }

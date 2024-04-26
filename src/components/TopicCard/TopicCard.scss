@@ -2,12 +2,15 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+
 .topics-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0.5rem 2.5rem 1rem 2.5rem;
   margin: 0rem;
+  width: 18vw;
 
   &__box {
     display: flex;
@@ -25,11 +28,12 @@
   }
 
   &__title {
-    @include forum-textFormat(0.9rem);
+    font: 100% $font-stack-gilroy-bl;
+    font-size: 1rem;
     letter-spacing: -0.349px;
     margin: 0.5rem;
   }
 
-  &__fav:hover {
-  }
+  // &__fav:hover {
+  // }
 }

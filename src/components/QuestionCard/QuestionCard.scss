@@ -2,6 +2,8 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
+$font-stack-gilroy-lt: 'Gilroy-Light', serif;
+
 .question-card {
   height: auto;
   margin-bottom: 1.5rem;
@@ -13,7 +15,7 @@
     }
 
   &__user-details {
-    width: 40%;
+    width: 100%;
     display: flex;
     align-items: center;
   }
@@ -29,6 +31,16 @@
     border-radius: 50%;
     width: 30px;
     height: 30px;
+  }
+
+  &__topic {
+    margin: 0;
+  }
+
+  &__content {
+    font: 100% $font-stack-gilroy-lt;
+    margin: 1% 0 3% 0;
+    font-size: 1.3rem;
   }
 
   &__text {

@@ -41,7 +41,7 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
                   setTopicError(false); 
                 }}
               />
-              <input
+              <textarea
                 required
                 className={`question-modal__description ${topicError ? "error" : ""}`}
                 type="text"

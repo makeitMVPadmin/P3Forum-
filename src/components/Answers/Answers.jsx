@@ -72,7 +72,6 @@ function Answers({ questionID }) {
 
   return (
     <div className="answers">
-      
       <div className="answers__form-container">
         <div className="answers__form">
           <textarea
@@ -90,20 +89,16 @@ function Answers({ questionID }) {
       </div>
       {answersWithUsers.map(({ answer, user, profilePhoto, createdAt }) => (
         <div key={answer.id} className="answers__container">
-
           <div className="answers__user">
             <img className='answers__avatar' src={profilePhoto ? profilePhoto : defaultUser} alt="Profile pic" />
             <p className="answers__user-text"> {user !== null && user !== '' ? user : 'Anonymous'} </p>
             <p className="answers__user-text">•</p>
             <p className="answers__user-text">{createdAt}</p>
           </div>
-
           <div className="answers__content">
             <p className="answers__content-text">{answer.answerContent}</p>
           </div>
-
           <div className='answers__actions'>
-
             <div className='answers__up-down-container'>
               <div className='answers__actions-container'>
                 <img className='answers__upvote' src={upvote} alt="test" />
@@ -114,21 +109,18 @@ function Answers({ questionID }) {
                 <p className='answers__value'>{answer.downVotes}</p>
               </div>
             </div>
-
             <div className='answers__icon-container'>
               <div className='answers__actions-container'>
                 <img className='answers__comment' src={comment} alt="test" />
                 <p className='answers__value'>0</p>
               </div>
             </div>
-
             <div className='answers__icon-container'>
               <div className='answers__actions-container'>
                 <img className='answers__share' src={share} alt="test" />
                 <p className='answers__value'>0</p>
               </div>
             </div>
-
           </div>
         </div>
       ))}
