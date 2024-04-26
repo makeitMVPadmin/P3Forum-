@@ -6,6 +6,7 @@ import downvote from '../../assets/downvote.svg'
 import share from '../../assets/share.svg'
 import upvote from '../../assets/upvote.svg'
 import defaultUser from '../../assets/icons/defaultUser.svg'
+import divider from '../../assets/divider.svg'
 import './QuestionCard.scss'
 
 const QuestionCard = ({ createdAt, downVotes, questionContent,
@@ -47,29 +48,28 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
           <h2 className='question-card__content'>{questionContent}</h2>
         </div>
         <div className='question-card__actions'>
-          <div className='question-card__button-container'>
+          <div className='question-card__up-down-container'>
             <button className='question-card__button'>
               <img className='question-card__upvote' src={upvote} alt="test" />
+              <p className='question-card__value'>{upVotes}</p>
             </button>
-            <p className='question-card__value'>{upVotes}</p>
-          </div>
-          <div className='question-card__button-container'>
+            <img className='question-card__divider' src={divider} alt="Divider"/>
             <button className='question-card__button'>
               <img className='question-card__downvote' src={downvote} alt="test" />
+              <p className='question-card__value'>{downVotes}</p>
             </button>
-            <p className='question-card__value'>{downVotes}</p>
           </div>
           <div className='question-card__button-container'>
             <button onClick={(e)=> toggleAnswers(e)} className='question-card__button'>
               <img className='question-card__comment' src={comment} alt="test" />
+              <p className='question-card__value'>{answersCount}</p>
             </button>
-            <p className='question-card__value'>{answersCount}</p>
           </div>
           <div className='question-card__button-container'>
             <button className='question-card__button'>
               <img className='question-card__share' src={share} alt="test" />
+              <p className='question-card__value'>0</p>
             </button>
-            <p className='question-card__value'>0</p>
           </div>
         </div>
         { showAnswers && <Answers questionID={questionID}/> }
