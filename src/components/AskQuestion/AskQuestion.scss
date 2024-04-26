@@ -2,6 +2,8 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+
 .ask-question__container {
 height: 8rem;
 display: flex;
@@ -20,15 +22,17 @@ border-radius: 50%;
 }
 
 .ask-question__button {
-width: 66rem;
 height: 4rem;
 text-align: left;
 padding-left: 1rem;
-@include forum-textFormat(1.6rem);
+color: #676767;
+font: 100% $font-stack-gilroy-bl;
+font-size: 1.6rem;
 letter-spacing: -0.349px;
 border: none;
 border-radius: 10px;
 background-color: #ededed;
+width: 85%;
 }
 
 .ask-question__button:hover {
