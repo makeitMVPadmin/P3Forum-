@@ -88,7 +88,6 @@ function Answers({ questionID }) {
           </div>
         </div>
       </div>
-      {console.log(answersWithUsers.length)}
       {answersWithUsers.map(({ answer, user, profilePhoto, createdAt }) => (
         <div key={answer.id} className="answers__container">
 
