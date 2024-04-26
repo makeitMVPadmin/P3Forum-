@@ -3,11 +3,11 @@
 @use "../../styles/partials/_mixins" as *;
 
 .question-card {
-  // width: 60%;
   height: auto;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   background: #FFF;
+  
   &__container {
     padding: 15px;
     }
@@ -40,14 +40,38 @@
     display: flex;
   }
 
-  &__button-container {
+  &__up-down-container {
+    height: 45px;
+    width: 140px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    border: #3e3e3e solid 1px;
+    border-radius: 15px;
+    margin-right: 15px;
+  }
+
+  &__divider {
+    height: 35px;
+  }
+
+  &__button-container {
+    height: 45px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #3e3e3e solid 1px;
+    border-radius: 15px;
+    margin-right: 15px;
   }
 
   &__button {
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     border: none;
     background-color: #FFF;
     padding: 0;
@@ -62,9 +86,10 @@
   &__comment,
   &__share {
     height: 30px;
+    margin-left: -10px;
   }
 
   &__value {
-    margin-right: 10px;
+    margin-right: -10px;
   }
 }
