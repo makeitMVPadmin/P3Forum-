@@ -7,20 +7,18 @@ import PostModal from "../../components/PostModal/PostModal";
 import UnsuccessfulPost from "../UnsuccessfulPost/UnsuccessfulPost";
 
 const AskQuestionsContainer = () => {
+  const { questionsCollection, timestamp, randomUser2 } = useGlobalContext();
 
   const [isModalOpen, setModalOpen] = useState(false);
   const [isPostModal, setPostModal] = useState(false);
   const [isErrorModal, setErrorModal] = useState(false);
+  const [newTopic, setNewTopic] = useState("");
+  const [newQuestion, setNewQuestion] = useState("");
+
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
   const closePost = () => setPostModal(false);
   const onClose = () => setErrorModal(false);
-
-  const { questionsCollection } = useGlobalContext();
-  const [newTopic, setNewTopic] = useState("");
-  const [newQuestion, setNewQuestion] = useState("");
-
-  const {timestamp, randomUser2} = useGlobalContext()
 
 const onSubmitQuestion = async () => {
   try {
@@ -42,6 +40,8 @@ const onSubmitQuestion = async () => {
     setErrorModal(true);
   }
 };
+
+
 
   return (
     <div className="askQuestionsContainer">
