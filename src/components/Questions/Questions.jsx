@@ -3,7 +3,7 @@ import QuestionCard from "../QuestionCard/QuestionCard";
 import './Questions.scss'
 
 const Questions = () => {
-  const { questionsList } = useGlobalContext();
+  const { questionsList, incrementVotes } = useGlobalContext();
 
   const questions = questionsList.sort((a,b) => b.createdAt - a.createdAt)
   .map(question => {
@@ -20,6 +20,7 @@ const Questions = () => {
        userID={userID}
        questionID={id}
        key={id}
+       incrementVotes={incrementVotes}
      />
    )
  })

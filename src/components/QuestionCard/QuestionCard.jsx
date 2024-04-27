@@ -10,7 +10,7 @@ import divider from '../../assets/divider.svg'
 import './QuestionCard.scss'
 
 const QuestionCard = ({ createdAt, downVotes, questionContent,
-  questionID, topic, upVotes, userID }) => {
+  questionID, topic, upVotes, userID, incrementVotes }) => {
 
     const { userList, answersList } = useGlobalContext()
     const user = userList.find(user => user.userID === userID)
@@ -20,6 +20,16 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
 
     const [showAnswers, setShowAnswers] = useState(false)
     const [answersCount, setAnswersCount] = useState(0);
+
+    const upVote = (e) => {
+      e.preventDefault()
+      incrementVotes(questionID, "Questions", "upVotes")
+    }
+
+    const downVote = (e) => {
+      e.preventDefault()
+      incrementVotes(questionID, "Questions", "downVotes")
+    }
 
     useEffect(() => {
       const filteredAnswerArray = answersList.filter((answer) => answer.questionID === questionID);
@@ -49,12 +59,12 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
         </div>
         <div className='question-card__actions'>
           <div className='question-card__up-down-container'>
-            <button className='question-card__button'>
+            <button onClick={(e) => upVote(e)} className='question-card__button'>
               <img className='question-card__upvote' src={upvote} alt="test" />
               <p className='question-card__value'>{upVotes}</p>
             </button>
             <img className='question-card__divider' src={divider} alt="Divider"/>
-            <button className='question-card__button'>
+            <button onClick={(e) => downVote(e)} className='question-card__button'>
               <img className='question-card__downvote' src={downvote} alt="test" />
               <p className='question-card__value'>{downVotes}</p>
             </button>
