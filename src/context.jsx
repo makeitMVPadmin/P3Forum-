@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { database } from "./config/firebase";
-import { getDocs, collection, Timestamp } from "firebase/firestore";
+import { getDocs, collection, Timestamp, doc, updateDoc, increment } from "firebase/firestore";
 
 const AppContext = React.createContext();
 
@@ -64,6 +64,19 @@ const AppProvider = ({ children }) => {
     const randomUser1 = randomUser();
     const randomUser2 = randomUser();
 
+    const incrementVotes = async (id, collectionName, voteType) => {
+        try {
+        const docRef = doc(database, collectionName, id);
+          await updateDoc(docRef, {
+            [voteType]: increment(1)
+          })
+        } catch(err) {
+          console.log(err)
+        }
+        getQuestionsList()
+        getAnswersList()
+      }
+
     useEffect(() => {
         getUserList();
         getQuestionsList();
@@ -84,7 +97,8 @@ const AppProvider = ({ children }) => {
                 getAnswersList, 
                 randomUser1,
                 randomUser2,  
-                timestamp        
+                timestamp,
+                incrementVotes
             }}>
                 {children}
         </AppContext.Provider>

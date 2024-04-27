@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
-import { addDoc } from "firebase/firestore";
+import { addDoc, updateDoc } from "firebase/firestore";
 import comment from "../../assets/comment.svg"
 import downvote from "../../assets/downvote.svg"
 import share from "../../assets/share.svg"
@@ -18,6 +18,7 @@ function Answers({ questionID }) {
     getAnswersList,
     randomUser1,
     timestamp,
+    incrementVotes
   } = useGlobalContext();
 
   const [newAnswer, setNewAnswer] = useState("");
@@ -31,7 +32,7 @@ function Answers({ questionID }) {
     const user = userList.find(user => user.userID === answer.userID);
     const date = new Date(answer.createdAt.seconds * 1000); 
     const formattedDate = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-    
+
     return {
       answer: answer,
       user: user.fullName,
@@ -70,6 +71,16 @@ function Answers({ questionID }) {
     setNewAnswer("");
   };
 
+  const upVote = (e, answerID) => {
+    e.preventDefault()
+    incrementVotes(answerID, "Answers", "upVotes")
+  }
+
+  const downVote = (e, answerID) => {
+    e.preventDefault()
+    incrementVotes(answerID, "Answers", "downVotes")
+  }
+
   return (
     <div className="answers">
       <div className="answers__form-container">
@@ -100,11 +111,11 @@ function Answers({ questionID }) {
           </div>
           <div className='answers__actions'>
             <div className='answers__up-down-container'>
-              <div className='answers__actions-container'>
+              <div onClick={(e) => upVote(e, answer.id)} className='answers__actions-container'>
                 <img className='answers__upvote' src={upvote} alt="test" />
                 <p className='answers__value'>{answer.upVotes}</p>
               </div>
-              <div className='answers__actions-container'>
+              <div onClick={(e) => downVote(e, answer.id)} className='answers__actions-container'>
                 <img className='answers__downvote' src={downvote} alt="test" />
                 <p className='answers__value'>{answer.downVotes}</p>
               </div>
