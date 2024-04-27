@@ -77,6 +77,17 @@ const AppProvider = ({ children }) => {
         getAnswersList()
       }
 
+      const compareVotes = (a, b) => {
+        const voteDifferenceA = a.upVotes - a.downVotes
+        const voteDifferenceB = b.upVotes - b.downVotes
+    
+        if(voteDifferenceA === voteDifferenceB) {
+          return b.createdAt - a.createdAt
+        } else {
+          return voteDifferenceB - voteDifferenceA;
+        }
+      }
+
     useEffect(() => {
         getUserList();
         getQuestionsList();
@@ -98,7 +109,8 @@ const AppProvider = ({ children }) => {
                 randomUser1,
                 randomUser2,  
                 timestamp,
-                incrementVotes
+                incrementVotes,
+                compareVotes
             }}>
                 {children}
         </AppContext.Provider>

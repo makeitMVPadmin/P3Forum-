@@ -3,9 +3,20 @@ import QuestionCard from "../QuestionCard/QuestionCard";
 import './Questions.scss'
 
 const Questions = () => {
-  const { questionsList, incrementVotes } = useGlobalContext();
+  const { questionsList, incrementVotes, compareVotes } = useGlobalContext();
 
-  const questions = questionsList.sort((a,b) => b.createdAt - a.createdAt)
+  // const compareVotes = (a, b) => {
+  //   const voteDifferenceA = a.upVotes - a.downVotes
+  //   const voteDifferenceB = b.upVotes - b.downVotes
+
+  //   if(voteDifferenceA === voteDifferenceB) {
+  //     return b.createdAt - a.createdAt
+  //   } else {
+  //     return voteDifferenceB - voteDifferenceA;
+  //   }
+  // }
+
+  const questions = questionsList.sort((compareVotes))
   .map(question => {
     const { id, createdAt, downVotes, questionContent,
         topic, upVotes, userID } = question
