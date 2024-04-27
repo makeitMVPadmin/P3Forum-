@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
-import { addDoc, updateDoc } from "firebase/firestore";
+import { addDoc } from "firebase/firestore";
 import comment from "../../assets/comment.svg"
 import downvote from "../../assets/downvote.svg"
 import share from "../../assets/share.svg"
@@ -18,7 +18,8 @@ function Answers({ questionID }) {
     getAnswersList,
     randomUser1,
     timestamp,
-    incrementVotes
+    incrementVotes,
+    compareVotes
   } = useGlobalContext();
 
   const [newAnswer, setNewAnswer] = useState("");
@@ -28,7 +29,7 @@ function Answers({ questionID }) {
   const onClose = () => setErrorModal(false);
   const filteredAnswerArray = answersList.filter(answer => answer.questionID === questionID);
 
-  const answersWithUsers = filteredAnswerArray.sort((a,b) => b.createdAt - a.createdAt).map(answer => {
+  const answersWithUsers = filteredAnswerArray.sort((compareVotes)).map(answer => {
     const user = userList.find(user => user.userID === answer.userID);
     const date = new Date(answer.createdAt.seconds * 1000); 
     const formattedDate = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
