@@ -22,6 +22,12 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
     getQuestionsList()
   };
 
+  const handleCancel = () => {
+    setNewTopic("");
+    setNewQuestion("");
+    onClose()
+  }
+
   return (
     <>
       {isModalOpen && (
@@ -50,7 +56,7 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
                 onChange={(e) => setNewQuestion(e.target.value)}
               />
               <div className="question-modal__form--buttons">
-                <button className="question-modal__cancel--button" onClick={onClose}>Cancel</button>
+                <button className="question-modal__cancel--button" onClick={handleCancel}>Cancel</button>
                 <button className="question-modal__post--button" onClick={handleSubmit}>Post</button>
               </div>
             </div>
