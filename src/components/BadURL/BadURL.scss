@@ -29,6 +29,10 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     margin-top: -60%;;
    }
 
+   &__return-box {
+    height: 60vh;
+   }
+
    &__home {
     color: black;
     font: 100% $font-stack-gilroy-lt;

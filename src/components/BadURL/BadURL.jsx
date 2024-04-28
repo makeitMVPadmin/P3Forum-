@@ -3,11 +3,13 @@ import ErrorImaage from "../../assets/error-image.png"
 import Undo from "../../assets/undo.svg"
 import "./BadURL.scss"
 
-function BadURL() {
+function BadURL({ errorType }) {
+  let errorMessage = "You've hit a BAD URL!";
+
   return (
     <div className="error__container">
       <div className="error__title">Oops!</div>
-      <div className="error__message">We're working on it!</div>
+      <div className="error__message">{errorMessage}</div>
       <img src={ErrorImaage} alt="Error" className="error__return-box" />
         <Link to="/">
           <div className="error__exit">
