@@ -8,12 +8,6 @@
   }
 }
 
-@mixin laptop {
-  @media (min-width: $laptop-breakpoint) {
-    @content;
-  }
-}
-
 @mixin desktop {
   @media (min-width: $desktop-breakpoint) {
     @content;
