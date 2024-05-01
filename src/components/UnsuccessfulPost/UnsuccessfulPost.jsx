@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./UnsuccessfulPost.scss";
+import unsuccessfulicon from "../../assets/icons/red-cross.svg";
 
 const UnsuccessfulPost = ({ onClose }) => {
   useEffect(() => {
@@ -13,10 +14,10 @@ const UnsuccessfulPost = ({ onClose }) => {
   return (
     <div className="unsuccessfulpost-modal__overlay">
       <div className="unsuccessfulpost-modal__popUp">
-        <div className="unsuccessfulpost-modal__icon"> 
-          {/* <p className="unsuccessfulpost-modal__icon--text"> X </p> */}
-        </div>
-        <p className="post-modal__text">Unsuccessful Post, Please Try Again</p>
+  
+       <img className="unsuccessfulpost-modal__icon" src={unsuccessfulicon} alt="icon showing unsucessful post" />
+        
+        <p className="unsuccessfulpost-modal__text">Unsuccessful Post, Please Try Again</p>
       </div>
     </div>
   );
