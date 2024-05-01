@@ -2,6 +2,7 @@ import "./ForumHomePage.scss";
 import Questions from "../../components/Questions/Questions"
 import AskQuestionsContainer from "../../components/AskQuestionsContainer/AskQuestionsContainer";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import UnsuccessfulPost from "../../components/UnsuccessfulPost/UnsuccessfulPost";
 
 const Home = () => {
 
