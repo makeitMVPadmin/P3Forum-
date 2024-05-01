@@ -12,6 +12,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
       font: 100% $font-stack-gilroy-bl;
       font-size: 1.2rem;
       letter-spacing: -0.349px;
+      margin: 0.7rem 0 0.7rem 0;
     }
   }
 
@@ -19,8 +20,109 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     &-title {
       text-align: center;
       font: 100% $font-stack-gilroy-bl;
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       letter-spacing: -0.349px;
+      margin: 0.7rem 0 0.7rem 0;
+    }
+  }
+}
+
+
+.topics-section {
+ display: flex;
+
+
+  @media (min-width: $tablet-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // padding: 0.5rem 0 0 0;
+    padding: 0.5rem 2.5rem 1rem 2.5rem;
+    margin: 0rem;
+    width: 13.75vw;
+    display: flex;
+    justify-content: space-between;
+   
+    &__box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      margin: 0.7rem;
+    }
+    &__icons {
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 0.3rem;
+      border-radius: 50%;
+      background: violet;
+    }
+
+    &__title {
+      font: 100% $font-stack-gilroy-bl;
+      width: 76px;
+      height: 20px;
+      font-size: 0.75rem;
+      letter-spacing: -0.349px;
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+
+    &__fav {
+      width: 1.5rem;
+      height: 1.5rem;
+      align-self: center;
+    }
+
+   
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 2.5rem 1rem 2.5rem;
+    margin: 0rem;
+    width: 18vw;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      margin: 0.7rem;
+    }
+    &__icons {
+      width: 2.3rem;
+      height: 2.3rem;
+      background: violet;
+      border-radius: 50%;
+    }
+
+    &__title {
+      font: 100% $font-stack-gilroy-bl;
+      width: 130px;
+      height: 20px;
+      font-size: .9rem;
+      letter-spacing: -0.349px;
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+
+    &__fav {
+      width: 3rem;
+      height: 3rem;
+      align-self: center;
     }
   }
 }
