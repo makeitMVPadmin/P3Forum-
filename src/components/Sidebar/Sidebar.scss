@@ -1,8 +1,15 @@
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
 .sidebar {
-  background: #FFF;
-  border-bottom-right-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 25%;
+  display: none;
+
+  @media (min-width: $tablet-breakpoint) {
+    background: #FFF;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+  }
 }
