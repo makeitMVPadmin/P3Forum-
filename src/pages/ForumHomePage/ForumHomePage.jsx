@@ -2,7 +2,8 @@ import "./ForumHomePage.scss";
 import Questions from "../../components/Questions/Questions"
 import AskQuestionsContainer from "../../components/AskQuestionsContainer/AskQuestionsContainer";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import UnsuccessfulPost from "../../components/UnsuccessfulPost/UnsuccessfulPost";
+
+import PostModal from "../../components/PostModal/PostModal";
 
 const Home = () => {
 
@@ -10,6 +11,7 @@ const Home = () => {
     <div className="home">
       <Sidebar />
       <div className="home-body">
+        <PostModal />
         <AskQuestionsContainer />
         <Questions />
       </div>
