@@ -26,9 +26,9 @@ const Questions = () => {
  })
 
   return (
-    <>
+    <section className="questions">
       {questions && questions }
-    </>
+    </section>
   )
 }
 
