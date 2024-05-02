@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
 import { addDoc } from "firebase/firestore";
-import comment from "../../assets/comment.svg"
+import reply from "../../assets/reply-arrow.svg";
 import downvote from "../../assets/downvote.svg"
 import share from "../../assets/share.svg"
 import upvote from "../../assets/upvote.svg"
@@ -111,6 +111,13 @@ function Answers({ questionID }) {
             <p className="answers__content-text">{answer.answerContent}</p>
           </div>
           <div className='answers__actions'>
+       
+            <div className='answers__icon-container'>
+              <div className='answers__actions-container'>
+                <img className='answers__comment' src={reply} alt="test" />
+                <p className='answers__value'>Reply</p>
+              </div>
+            </div>
             <div className='answers__up-down-container'>
               <div onClick={(e) => upVote(e, answer.id)} className='answers__actions-container'>
                 <img className='answers__upvote' src={upvote} alt="test" />
@@ -119,12 +126,6 @@ function Answers({ questionID }) {
               <div onClick={(e) => downVote(e, answer.id)} className='answers__actions-container'>
                 <img className='answers__downvote' src={downvote} alt="test" />
                 <p className='answers__value'>{answer.downVotes}</p>
-              </div>
-            </div>
-            <div className='answers__icon-container'>
-              <div className='answers__actions-container'>
-                <img className='answers__comment' src={comment} alt="test" />
-                <p className='answers__value'>0</p>
               </div>
             </div>
             <div className='answers__icon-container'>
