@@ -2,9 +2,10 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
-// $font-stack-corban: 'Corben', serif;
 $font-stack-gilroy-lt: 'Gilroy-Light', serif;
 $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
 
 .home {
     display: flex;
@@ -12,9 +13,20 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     font: 100% $font-stack-gilroy-bl;
     justify-content: space-between;
     background: #BFE5FF;
+    width: 100vw;
 }
+
 .home-body {
-    width: 75%;
+    width: 90%;
     padding: 2.5rem 1.5rem;
     background: #BFE5FF;
+
+    @media (min-width: $tablet-breakpoint) {
+        width: 75%;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        width: 75%;
+    }
+
 }

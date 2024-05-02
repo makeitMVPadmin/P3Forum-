@@ -3,8 +3,6 @@
 @use "../../styles/partials/_mixins" as *;
 
 $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
-$tablet-breakpoint: 768px;
-$desktop-breakpoint: 1024px;
 
 .header {
   align-items: center;
