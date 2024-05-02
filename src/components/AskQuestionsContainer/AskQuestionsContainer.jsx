@@ -5,6 +5,7 @@ import AskQuestion from "../../components/AskQuestion/AskQuestion";
 import QuestionModal from "../../components/QuestionModal/QuestionModal";
 import PostModal from "../../components/PostModal/PostModal";
 import UnsuccessfulPost from "../UnsuccessfulPost/UnsuccessfulPost";
+import './AskQuestionsContainer.scss'
 
 const AskQuestionsContainer = () => {
   const { questionsCollection, timestamp, randomUser2 } = useGlobalContext();
