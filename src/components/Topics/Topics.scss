@@ -36,7 +36,6 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // padding: 0.5rem 0 0 0;
     padding: 0.5rem 2.5rem 1rem 2.5rem;
     margin: 0rem;
     width: 13.75vw;
@@ -88,7 +87,52 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     justify-content: space-between;
     padding: 0.5rem 2.5rem 1rem 2.5rem;
     margin: 0rem;
-    width: 18vw;
+    width: 20vw;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      // margin-left: 2rem;
+      cursor: pointer;
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      margin: 0.7rem;
+    }
+    &__icons {
+      width: 2.3rem;
+      height: 2.3rem;
+      background: violet;
+      border-radius: 50%;
+    }
+
+    &__title {
+      font: 100% $font-stack-gilroy-bl;
+      width: 100px;
+      height: 20px;
+      font-size: .9rem;
+      letter-spacing: -0.349px;
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+
+    &__fav {
+      width: 3rem;
+      height: 3rem;
+      align-self: center;
+    }
+  }
+
+  @media (min-width: $bigdesktop-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 2.5rem 1rem 2.5rem;
+    margin: 0rem;
+   width: fit-content;
 
     &__box {
       display: flex;
@@ -100,7 +144,8 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     &__container {
       display: flex;
       align-items: center;
-      margin: 0.7rem;
+      margin-left: 1rem;
+     
     }
     &__icons {
       width: 2.3rem;
@@ -120,7 +165,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     }
 
     &__fav {
-      width: 3rem;
+      width: 5rem;
       height: 3rem;
       align-self: center;
     }
