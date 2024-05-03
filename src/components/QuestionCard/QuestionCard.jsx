@@ -10,7 +10,7 @@ import divider from '../../assets/divider.svg'
 import './QuestionCard.scss'
 
 const QuestionCard = ({ createdAt, downVotes, questionContent,
-  questionID, topic, upVotes, userID, incrementVotes }) => {
+  questionID, topic, upVotes, userID, incrementVotes, isNew }) => {
 
     const { userList, answersList } = useGlobalContext()
     const user = userList.find(user => user.userID === userID)
@@ -20,6 +20,7 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
 
     const [showAnswers, setShowAnswers] = useState(false)
     const [answersCount, setAnswersCount] = useState(0);
+    const [showGreenBorder, setShowGreenBorder] = useState(isNew);
 
     const upVote = (e) => {
       e.preventDefault()
@@ -42,8 +43,16 @@ const QuestionCard = ({ createdAt, downVotes, questionContent,
       setShowAnswers(!showAnswers)
     }
 
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowGreenBorder(false);
+      }, 3000);
+    
+      return () => clearTimeout(timer);
+    }, []);
+
   return (
-    <section className='question-card'>
+    <section className={`question-card ${showGreenBorder ? 'highlighted' : ''}`}>
       <div className='question-card__container'>
         <div className='question-card__user-details'>
           <div className='question-card__avatar-container'>

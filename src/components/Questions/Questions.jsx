@@ -10,7 +10,16 @@ const Questions = () => {
     const { id, createdAt, downVotes, questionContent,
         topic, upVotes, userID } = question
 
-   return (
+        const isQuestionNew = (createdAt) => {
+          const currentTimeInSeconds = Math.floor(Date.now() / 1000);
+          const secondsDifference = currentTimeInSeconds - createdAt.seconds;
+          const threshold = 10;
+          return secondsDifference <= threshold;
+        };
+  
+        const isNew = isQuestionNew(createdAt);
+
+  return (
      <QuestionCard
        createdAt={createdAt}
        downVotes={downVotes}
@@ -21,6 +30,7 @@ const Questions = () => {
        questionID={id}
        key={id}
        incrementVotes={incrementVotes}
+       isNew={isNew}
      />
    )
  })
