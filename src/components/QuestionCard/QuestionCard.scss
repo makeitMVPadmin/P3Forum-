@@ -2,7 +2,7 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
-$font-stack-gilroy-lt: 'Gilroy-Light', serif;
+$font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
 
 .question-card {
   height: auto;
@@ -43,7 +43,7 @@ $font-stack-gilroy-lt: 'Gilroy-Light', serif;
   }
 
   &__content {
-    font: 100% $font-stack-gilroy-lt;
+    font: 100% $font-stack-gilroy-lb;
     margin: 1% 0 3% 0;
     font-size: 1.4rem;
   }

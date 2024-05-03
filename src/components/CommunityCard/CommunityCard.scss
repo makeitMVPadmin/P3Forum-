@@ -6,13 +6,13 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
 .community-card {
   display: none;
-
+ 
   @media (min-width: $tablet-breakpoint) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5rem 0 0 0;
-    margin: 0rem;
+    margin: 0rem 0 1rem 1rem;
     width: 20vw;
 
     &__container {
@@ -50,14 +50,13 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
   @media (min-width: $desktop-breakpoint) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0.5rem 2.5rem 1rem 2.5rem;
+    justify-content: space-around;
+    padding: 0.5rem 2rem 1rem 2rem;
     margin: 0rem;
-    width: 18vw;
+   
 
     &__container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       cursor: pointer;
     }
@@ -74,6 +73,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
       font-size: 1rem;
       letter-spacing: -0.349px;
       margin: 0.5rem;
+      width: 100px;
     }
 
     &__favorite {
@@ -82,9 +82,48 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
       align-self: center;
     }
 
-    &__favorite:hover {
+   
+  }
+  @media (min-width: $bigdesktop-breakpoint) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem 2rem 1rem 2rem;
+    margin: 0rem;
+   
+
+    &__container {
+      display: flex;
+      align-items: center;
       cursor: pointer;
     }
+
+    &__logo {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0.3rem;
+      border-radius: 50%;
+    }
+
+    &__title {
+      font: 100% $font-stack-gilroy-bl;
+      font-size: 1rem;
+      letter-spacing: -0.349px;
+      margin: 0.5rem;
+      width: 120px;
+    }
+
+    &__favorite {
+      width: 3rem;
+      height: 3rem;
+      align-self: center;
+    }
+
+   
+  }
+
+  &__favorite:hover {
+    cursor: pointer;
   }
 }
 
