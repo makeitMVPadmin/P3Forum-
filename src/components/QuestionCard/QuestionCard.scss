@@ -112,7 +112,8 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
     &.highlighted {
       border: 4px solid #52c059;
       transition: border-color 5s ease;
-
+    }
+    
     @media (max-width: $mobile-breakpoint) {
       width: 103%;
     }
