@@ -9,9 +9,10 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   background: #FFF;
-
+  
   &__container {
-    padding: 15px;
+    padding: 2rem 1rem;
+    margin: 1rem;
   }
 
   &__user-details {
