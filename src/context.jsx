@@ -56,6 +56,7 @@ const AppProvider = ({ children }) => {
     const currentDate = new Date();
       const timeZoneOffsetInMilliseconds = -6 * 60 * 60 * 1000;
       const adjustedDate = new Date(currentDate.getTime() + timeZoneOffsetInMilliseconds);
+        adjustedDate.setHours(adjustedDate.getHours() + 6);
       const timestamp = Timestamp.fromDate(adjustedDate);
 
     const randomUser = () => {

@@ -4,7 +4,7 @@ import Undo from "../../assets/undo.svg"
 import "./BadURL.scss"
 
 function BadURL({ errorType }) {
-  let errorMessage = "You've hit a BAD URL!";
+  let errorMessage = "This Page Doesn't Exist!";
 
   return (
     <div className="error__container">
