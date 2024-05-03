@@ -5,6 +5,8 @@
   display: none;
 
   @media (min-width: $tablet-breakpoint) {
+    top: 0;
+    position: sticky;
     background: #FFF;
     border-bottom-right-radius: 10px;
     display: flex;

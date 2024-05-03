@@ -2,16 +2,18 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
-$font-stack-gilroy-lt: 'Gilroy-Light', serif;
+$font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
 
 .question-card {
   height: auto;
   margin-bottom: 1.5rem;
+  
   border-radius: 10px;
   background: #FFF;
 
   &__container {
     padding: 15px;
+
   }
 
   &__user-details {
@@ -43,7 +45,7 @@ $font-stack-gilroy-lt: 'Gilroy-Light', serif;
   }
 
   &__content {
-    font: 100% $font-stack-gilroy-lt;
+    font: 100% $font-stack-gilroy-lb;
     margin: 1% 0 3% 0;
     font-size: 1.4rem;
   }
@@ -110,6 +112,9 @@ $font-stack-gilroy-lt: 'Gilroy-Light', serif;
     &.highlighted {
       border: 4px solid #52c059;
       transition: border-color 5s ease;
+
+    @media (max-width: $mobile-breakpoint) {
+      width: 103%;
     }
 
   @media (min-width: $tablet-breakpoint) {
