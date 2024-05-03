@@ -13,7 +13,7 @@ const Questions = () => {
         const isQuestionNew = (createdAt) => {
           const currentTimeInSeconds = Math.floor(Date.now() / 1000);
           const secondsDifference = currentTimeInSeconds - createdAt.seconds;
-          const threshold = 10;
+          const threshold = 120;
           return secondsDifference <= threshold;
         };
   
