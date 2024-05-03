@@ -10,7 +10,7 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
   
   border-radius: 10px;
   background: #FFF;
-
+  
   &__container {
     padding: 15px;
 
@@ -41,13 +41,14 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
   }
 
   &__topic {
-    font-size: 1.5rem;
+    font-size: 1.56rem;
   }
 
   &__content {
     font: 100% $font-stack-gilroy-lb;
     margin: 1% 0 3% 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    text-align: left;
   }
 
     &__actions {
@@ -109,10 +110,15 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
       margin-right: -10px;
     }
   
+    @media (max-width: $mobile-breakpoint) {
+      &__text {
+        font-size: 1rem;
+      }
     &.highlighted {
       border: 4px solid #52c059;
       transition: border-color 5s ease;
     }
+  }
     
     @media (max-width: $mobile-breakpoint) {
       width: 103%;
@@ -125,6 +131,7 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
     }
   
     &__topic {
+     
       margin-bottom: 2%;
     }
   

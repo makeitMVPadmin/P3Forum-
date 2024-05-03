@@ -113,7 +113,7 @@ function Answers({ questionID }) {
           <div className='answers__actions'>
        
             <div className='answers__icon-container'>
-              <div className='answers__actions-container'>
+              <div className='answers__actions-container reply'>
                 <img className='answers__comment' src={reply} alt="test" />
                 <p className='answers__value'>Reply</p>
               </div>
@@ -129,9 +129,9 @@ function Answers({ questionID }) {
               </div>
             </div>
             <div className='answers__icon-container'>
-              <div className='answers__actions-container'>
+              <div className='answers__actions-container share'>
                 <img className='answers__share' src={share} alt="test" />
-                <p className='answers__value'>0</p>
+                <p className='answers__value'>0</p> 
               </div>
             </div>
           </div>
