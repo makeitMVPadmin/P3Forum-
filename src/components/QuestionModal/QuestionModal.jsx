@@ -31,7 +31,7 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
   return (
     <>
       {isModalOpen && (
-        // <div className="question-modal--overlay">
+        <div className="question-modal--overlay">
           <div className="question-modal__container">
           
             <img src={randomUser2?.profilePhoto ? randomUser2?.profilePhoto : defaultUser} alt="Profile Pic" className="question-modal__profile--img"/>
@@ -40,7 +40,7 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
                 required
                 className={`question-modal__topic ${topicError ? "error" : ""}`}
                 type="text"
-                placeholder="Title"
+                placeholder="Question"
                 value={newTopic}
                 onChange={(e) => {
                   setNewTopic(e.target.value);
@@ -61,7 +61,7 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
               </div>
             </div>
           </div>
-        // </div>
+         </div>
       )}
     </>
   );
