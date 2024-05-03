@@ -12,14 +12,14 @@ $desktop-breakpoint: 1024px;
     flex-direction: row;
     font: 100% $font-stack-gilroy-bl;
     justify-content: space-between;
-    background: #BFE5FF;
+    
     width: 100vw;
 }
 
 .home-body {
     width: 90%;
-    padding: 2.5rem 1.5rem;
-    background: #BFE5FF;
+    padding: 2.5rem 1rem;
+    // background: #BFE5FF;
 
     @media (min-width: $tablet-breakpoint) {
         width: 75%;
