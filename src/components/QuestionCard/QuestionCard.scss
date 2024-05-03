@@ -108,6 +108,12 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
     &__value {
       margin-right: -10px;
     }
+  
+    &.highlighted {
+      border: 4px solid #52c059;
+      transition: border-color 5s ease;
+    }
+    
     @media (max-width: $mobile-breakpoint) {
       width: 103%;
     }
@@ -128,6 +134,11 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
   
     &__button-container {
       width: 9vw;
+    }
+
+    &.highlighted {
+      border: 4px solid #52c059;
+      transition: border-color 5s ease;
     }
   }
 
@@ -161,6 +172,11 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
 
     &__button-container {
       width: 5vw;
+    }
+
+    &.highlighted {
+      border: 4px solid #52c059;
+      transition: border-color 5s ease;
     }
   }
 }
