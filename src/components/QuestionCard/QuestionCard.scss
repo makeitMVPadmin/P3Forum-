@@ -7,11 +7,13 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
 .question-card {
   height: auto;
   margin-bottom: 1.5rem;
+  
   border-radius: 10px;
   background: #FFF;
 
   &__container {
     padding: 15px;
+
   }
 
   &__user-details {
@@ -106,7 +108,9 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
     &__value {
       margin-right: -10px;
     }
-  
+    @media (max-width: $mobile-breakpoint) {
+      width: 103%;
+    }
 
   @media (min-width: $tablet-breakpoint) {
     &__avatar-container {
