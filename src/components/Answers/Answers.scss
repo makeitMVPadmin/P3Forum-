@@ -13,7 +13,8 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
+
 
   @media (min-width: $tablet-breakpoint) {
     &__form-container {
@@ -34,7 +35,7 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
 
     &__input {
       border: none;
-      color: #9B9B9B;
+      color: #9b9b9b;
       font: 100% $font-stack-gilroy-bl;
       line-height: 24.5px;
       font-size: 1.3rem;
@@ -80,8 +81,8 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     }
 
     &__avatar {
-      width: 2rem;
-      height: 2rem;
+      width: 3rem;
+      height: 3rem;
       border-radius: 50%;
       margin-right: 1%;
     }
@@ -89,68 +90,73 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     &__user-text {
       font: 100% $font-stack-gilroy-bl;
       margin: 5px;
+      font-size: 1.6rem;
     }
 
     &__content-text {
-      margin: 0 4% 2% 5%;
+
+      margin: 1% 4% 4% 10%;
     }
 
     &__actions {
       display: flex;
       margin: 0 0 3% 0;
-      border-bottom: #cacaca solid 1px;
-      font-size: 0.9rem;
+      font-size: 1.68rem;
     }
 
     &__up-down-container {
       display: flex;
-      border: #3e3e3e solid 1px;
-      border-radius: 16px;
-      height: 6vh;
+      border: #000000 solid 1px;
+      border-radius: 19px;
+      height: 3.75rem;
       justify-content: center;
-      width: 12%;
-      margin: 0 1% 2% 2%;
+      width: 13rem;
+      margin: 0 1.5rem;
     }
 
     &__icon-container {
       display: flex;
       border: #3e3e3e solid 1px;
-      border-radius: 16px;
-      height: 6vh;
+      border-radius: 19px;
+      height: 3.75rem;
       justify-content: center;
-      width: 6%;
-      margin: 0 1% 2% 0;
+      align-items: center;
     }
 
     &__actions-container {
-      align-items: center;
       display: flex;
-      margin: 0 5px 0 5px;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
     }
 
     &__upvote,
     &__downvote,
     &__comment,
     &__share {
-      height: 4vh;
-      margin: 0 1% 0 1%;
+      height: 5vh;
     }
 
     &__downvote {
       border-left: #3e3e3e solid 1px;
-      padding-left: 5px;
+      padding-left: 10px;
     }
-
+    .reply {
+      width: 154px;
+    }
     &__value {
-      margin-left: 1.5%;
+      margin-left: 1rem;
     }
   }
-
+  @media (min-width: $desktop-breakpoint) {
+    &__content-text {
+      font-size: 1.68rem;
+      margin: 1% 4% 4% 8%;
+    }
+  }
   @media (max-width: $mobile-breakpoint) {
     &__form-container {
       display: flex;
-      // justify-content: center;
-      // width: 100%;
     }
 
     &__form {
@@ -165,7 +171,7 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
 
     &__input {
       border: none;
-      color: #9B9B9B;
+      color: #9b9b9b;
       font: 100% $font-stack-gilroy-bl;
       line-height: 24.5px;
       font-size: 1rem;
@@ -183,7 +189,6 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     }
 
     &__buttons-container {
-  
       display: flex;
       justify-content: flex-end;
     }
@@ -226,14 +231,11 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
 
     &__content-text {
       font-size: 1.25rem;
-      // margin: 0 4% 2% 5%;
     }
 
     &__actions {
-   
       display: flex;
       margin: 0 0 3% 0;
-      // border-bottom: #cacaca solid 1px;
       font-size: 0.9rem;
     }
 
@@ -243,9 +245,6 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
       border-radius: 8px;
       height: 6vh;
       justify-content: center;
-      // width: 12%;
-      // padding: 0rem 1rem;
-      // margin: 0 1% 2% 2%;
     }
 
     &__icon-container {
@@ -254,17 +253,13 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
       border-radius: 8px;
       height: 6vh;
       justify-content: center;
-      
       margin: 0 0.5rem;
-      
     }
 
     &__actions-container {
-   
       align-items: center;
       display: flex;
       padding: 0.5rem;
-     
     }
 
     &__upvote,
@@ -272,20 +267,14 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     &__comment,
     &__share {
       height: 4vh;
-      // margin: 0 1% 0 1%;
     }
 
     &__downvote {
       border-left: #3e3e3e solid 1px;
-      // padding-left: 5px;
     }
 
-    &__value {
-      // margin-left: 1.5%;
-    }
+
   }
-
-
 
   &__button-post {
     background-color: #ffd22f;
@@ -302,9 +291,8 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
   }
 
   &__container {
-   padding-top: 1rem;
-   border-bottom: #cacaca solid 1px;
-
+    padding-top: 1rem;
+    border-bottom: #cacaca solid 1px;
   }
 
   &__user {
