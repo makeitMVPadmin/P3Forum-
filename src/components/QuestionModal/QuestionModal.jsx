@@ -31,7 +31,7 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
   return (
     <>
       {isModalOpen && (
-        <div className="question-modal--overlay">
+        <div className="question-modal">
           <div className="question-modal__container">
           
             <img src={randomUser2?.profilePhoto ? randomUser2?.profilePhoto : defaultUser} alt="Profile Pic" className="question-modal__profile--img"/>
