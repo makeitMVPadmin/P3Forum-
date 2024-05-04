@@ -16,30 +16,50 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
   align-items: center;
 
   &__container {
-    width: 85%;
-    height: 14rem;
+    width: 90%;
+    height: 20rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     align-content: baseline;
     border-radius: 16px;
     background: #fff;
-    padding: 1.25rem;
+    padding: 3rem 0.5rem 2.5rem 0.5rem;
   }
 
   &__profile--img {
-    width: 2rem;
-    height: 2rem;
-    margin-left: -0.5rem;
-    align-self: start;
-    border-radius: 50%;
+    display: none;
   }
 
   &__form {
     width: 90%;
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+  }
+
+  &__close-container {
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+  }
+
+  &__close--button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    background: none;
+  }
+
+  &__close--button:hover {
+    cursor: pointer;
+  }
+
+  &__close {
+    width: 1rem;
+    height: 1rem;
+    justify-self: flex-end;
   }
 
   &__topic {
@@ -51,7 +71,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     background: #fff;
     border-radius: 8px;
     border: 1px solid #000;
-    padding: 5px 0px 5px 18px;
+    padding: 1rem 0 0 1rem;
   }
 
   .error {
@@ -64,7 +84,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     letter-spacing: -0.349px;
     border-radius: 8px;
     border: 1px solid #000;
-    padding: 0.5rem 0rem 4rem 1rem;
+    padding: 0.5rem 0rem 10rem 1rem;
     margin-top: 1.3rem;
   }
 
@@ -102,31 +122,31 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
   @media (min-width: $tablet-breakpoint) {
     &__container {
-      width: 90%;
-      height: 40%;
+      width: 60%;
+      height: 15rem;
       display: flex;
       justify-content: space-around;
       align-items: center;
       align-content: baseline;
-      margin-bottom: 1.5rem;
       border-radius: 16px;
       background: #fff;
+      padding: 1rem;
     }
 
     &__profile--img {
       width: 2rem;
       height: 2rem;
-      margin-left: 1rem;
-      margin-bottom: 11.5rem;
+      margin-right: -2rem;
       border-radius: 50%;
+      display: flex;
     }
 
     &__form {
       width: 75%;
       display: flex;
       flex-direction: column;
-      margin-top: 2rem;
-      margin-right: 7rem;
+      margin-top: 1rem;
+      margin-right: 3rem;
     }
 
     &__topic {
@@ -193,7 +213,6 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
         justify-content: space-around;
         align-items: center;
         align-content: baseline;
-        margin-bottom: 1.5rem;
         border-radius: 16px;
         background: #fff;
       }
@@ -204,6 +223,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
         margin-left: 2.3rem;
         margin-bottom: 20rem;
         border-radius: 50%;
+        display: flex;
       }
 
       &__form {
