@@ -205,6 +205,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      
     }
 
     &__cancel--button {
@@ -320,6 +321,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
         align-items: center;
         justify-content: flex-end;
         margin-top: 1rem;
+        margin-right: -3.5rem;
       }
 
       &__cancel--button {
