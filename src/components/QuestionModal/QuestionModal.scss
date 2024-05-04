@@ -179,6 +179,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     }
 
     &__topic {
+      height: 2rem;
       text-align: left;
       font-size: 1.6rem;
       font: 100% $font-stack-gilroy-bl;
@@ -291,8 +292,8 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
       &__topic {
         text-align: left;
-        height: 2.5rem;
         width: 105%;
+        height: 2.5rem;
         font-size: 1.6rem;
         font: 100% $font-stack-gilroy-bl;
         font-size: 1.6rem;
