@@ -6,14 +6,6 @@ import Icon2 from "../../assets/icons/icon2.svg";
 import Icon3 from "../../assets/icons/icon3.svg";
 import start from "../../assets/icons/Favourite Commuinity.svg";
 const Topics = () => {
-  // const { questionsList } = useGlobalContext();
-
-  // const uniqueTopics = Array.from(
-  //   new Set(questionsList.map((question) => question.topic))
-  // );
-
-  // const shortTopics = uniqueTopics.filter((topic) => topic.length < 15);
-
   const currentTopics = [
     { title: "UX Design", icon: Icon1 },
     { title: "Firebase", icon: Icon2 },
@@ -21,23 +13,17 @@ const Topics = () => {
   ];
 
   return (
-    <section className="topics-section">
-      <p className="topics-title">Topics</p>
-
-      {/* {shortTopics.map((topic) => (
-        <TopicCard key={topic} topic={topic} />
-      ))} */}
-      <div className="topics-section__box">
+    <section className="topics">
+      <h2 className="topics__main-title">Topics</h2>
+      <div className="topics__box">
         {currentTopics.map((item, index) => (
-          <div className="topics-section__container" key={index}>
+          <div className="topics__container" key={index}>
+            <div className="topics__holder">
+              <img className="topics__icons" src={item.icon} alt={item.title} />
+              <div className="topics__title">{item.title}</div>
+            </div>
             <img
-              className="topics-section__icons"
-              src={item.icon}
-              alt={item.title}
-            />
-            <div className="topics-section__title">{item.title}</div>
-            <img
-              className="topics-section__fav"
+              className="topics__fav"
               src={start}
               alt="start icon represent how users like this topic"
             />

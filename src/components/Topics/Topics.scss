@@ -5,71 +5,48 @@
 $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
 .topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: $tablet-breakpoint) {
-    &-title {
+    &__main-title {
       text-align: center;
       font: 100% $font-stack-gilroy-bl;
       font-size: 1.2rem;
-      letter-spacing: -0.349px;
-      margin: 0.7rem 0 0.7rem 0;
     }
-  }
 
-  @media (min-width: $desktop-breakpoint) {
-    &-title {
-      text-align: center;
-      font: 100% $font-stack-gilroy-bl;
-      font-size: 1.55rem;
-      letter-spacing: -0.349px;
-      margin: 0.7rem 0 0.7rem 0;
-    }
-  }
-}
-
-
-.topics-section {
- display: flex;
-
-
-  @media (min-width: $tablet-breakpoint) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.5rem 2.5rem 1rem 2.5rem;
-    margin: 0rem;
-    width: 13.75vw;
-    display: flex;
-    justify-content: space-between;
-   
     &__box {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
       cursor: pointer;
     }
+
     &__container {
       display: flex;
-      align-items: center;
+      justify-content: space-between;
+      width: 22vw;
       margin: 0.7rem;
     }
+
+    &__holder {
+      align-items: center;
+      display: flex;
+      width: 70%;
+    }
+
     &__icons {
-      width: 1.5rem;
+      background: violet;
+      border-radius: 50%;
       height: 1.5rem;
       padding: 0.3rem;
-      border-radius: 50%;
-      background: violet;
+      width: 1.5rem;
     }
 
     &__title {
       font: 100% $font-stack-gilroy-bl;
-      width: 76px;
-      height: 20px;
-      font-size: 0.75rem;
-      letter-spacing: -0.349px;
+      font-size: .75rem;
       margin: 0.5rem;
-      cursor: pointer;
     }
 
     &__fav {
@@ -77,97 +54,37 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
       height: 1.5rem;
       align-self: center;
     }
-
-   
   }
 
   @media (min-width: $desktop-breakpoint) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.5rem 2.5rem 1rem 2.5rem;
-    margin: 0rem;
-    width: 20vw;
+    &__main-title {
+      font-size: 1.6rem;
+    }
 
     &__box {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      // margin-left: 2rem;
       cursor: pointer;
     }
+
     &__container {
-      display: flex;
-      align-items: center;
-      margin: 0.7rem;
+      width: 19vw;
     }
+
     &__icons {
-      width: 2.3rem;
-      height: 2.3rem;
-      background: violet;
-      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1%;
+      margin-left: -3%;
     }
 
     &__title {
       font: 100% $font-stack-gilroy-bl;
-      width: 100px;
-      height: 20px;
-      font-size: .9rem;
-      letter-spacing: -0.349px;
+      font-size: 1rem;
       margin: 0.5rem;
-      cursor: pointer;
     }
 
     &__fav {
       width: 3rem;
       height: 3rem;
-      align-self: center;
-    }
-  }
-
-  @media (min-width: $bigdesktop-breakpoint) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.5rem 2.5rem 1rem 2.5rem;
-    margin: 0rem;
-   width: fit-content;
-
-    &__box {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-    }
-    &__container {
-      display: flex;
-      align-items: center;
-      margin-left: 1rem;
-     
-    }
-    &__icons {
-      width: 2.3rem;
-      height: 2.3rem;
-      background: violet;
-      border-radius: 50%;
-    }
-
-    &__title {
-      font: 100% $font-stack-gilroy-bl;
-      width: 130px;
-      height: 20px;
-      font-size: .9rem;
-      letter-spacing: -0.349px;
-      margin: 0.5rem;
-      cursor: pointer;
-    }
-
-    &__fav {
-      width: 5rem;
-      height: 3rem;
-      align-self: center;
     }
   }
 }

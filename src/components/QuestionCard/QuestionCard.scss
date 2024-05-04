@@ -2,7 +2,8 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
-$font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
+$font-stack-gilroy-lt: 'Gilroy-Light', serif;
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
 .question-card {
   height: auto;
@@ -41,11 +42,12 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
   }
 
   &__topic {
-    font-size: 1.56rem;
+    font-size: 1.7rem;
+    margin: 1% 0;
   }
 
   &__content {
-    font: 100% $font-stack-gilroy-lb;
+    font: 100% $font-stack-gilroy-lt;
     margin: 1% 0 3% 0;
     font-size: 1.2rem;
     text-align: left;
@@ -109,30 +111,11 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
     &__value {
       margin-right: -10px;
     }
-  
-    @media (max-width: $mobile-breakpoint) {
-      &__text {
-        font-size: 1rem;
-      }
-    &.highlighted {
-      border: 4px solid #52c059;
-      transition: border-color 5s ease;
-    }
-  }
-    
-    @media (max-width: $mobile-breakpoint) {
-      width: 103%;
-    }
 
   @media (min-width: $tablet-breakpoint) {
     &__avatar-container {
       width: 12%;
       height: 12%;
-    }
-  
-    &__topic {
-     
-      margin-bottom: 2%;
     }
   
     &__up-down-container {
@@ -157,10 +140,6 @@ $font-stack-gilroy-lb: 'Gilroy-ExtraBold', serif;
 
     &__avatar {
       width: 40%;
-    }
-
-    &__topic {
-      margin: 2% 0 ;
     }
 
     &__content {

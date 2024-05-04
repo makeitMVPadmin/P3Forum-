@@ -94,7 +94,8 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     }
 
     &__content-text {
-
+      font: 100% $font-stack-gilroy-lt;
+      font-size: 1.2rem;
       margin: 1% 4% 4% 10%;
     }
 
