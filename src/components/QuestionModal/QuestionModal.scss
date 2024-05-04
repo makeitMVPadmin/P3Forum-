@@ -234,8 +234,8 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
   @media (min-width: $desktop-breakpoint) {
     &__container {
-        width: 55%;
-        height: 30rem;
+        width: 90%;
+        height: 27rem;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -245,12 +245,13 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
       }
 
       &__profile--img {
-        width: 2.8rem;
-        height: 2.8rem;
-        margin-left: 2.3rem;
-        margin-bottom: 20rem;
+        width: 3.4rem;
+        height: 3.4rem;
+        margin-right: -2rem;
         border-radius: 50%;
         display: flex;
+        align-self: start;
+        margin-top: 2rem;
       }
 
       &__form {
@@ -262,16 +263,18 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
       }
 
       &__close-container {
-        width: 100%;
+        width: 5%;
         height: 1rem;
         display: flex;
         justify-content: flex-end;
-        padding: 1rem 0;
+        padding: 0;
+        margin-left: 113%;
+        margin-bottom: -2%;
       }
 
       &__close--button {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 3rem;
+        height: 3rem;
         border: none;
         background: none;
       }
@@ -281,13 +284,14 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
       }
 
       &__close {
-        width: 1rem;
-        height: 1rem;
+        width: 2rem;
+        height: 2rem;
         justify-self: flex-end;
       }
 
       &__topic {
         text-align: left;
+        height: 2.5rem;
         width: 105%;
         font-size: 1.6rem;
         font: 100% $font-stack-gilroy-bl;
@@ -296,7 +300,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
         background: #fff;
         border-radius: 8px;
         border: 1px solid #000;
-        padding: 1rem 0 0 1rem;
+        padding: 0.5rem 0 0 1rem;
       }
 
       &__description {
