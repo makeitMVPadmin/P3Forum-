@@ -1,0 +1,90 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+
+.topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-breakpoint) {
+    &__main-title {
+      text-align: center;
+      font: 100% $font-stack-gilroy-bl;
+      font-size: 1.2rem;
+    }
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      width: 22vw;
+      margin: 0.7rem;
+    }
+
+    &__holder {
+      align-items: center;
+      display: flex;
+      width: 70%;
+    }
+
+    &__icons {
+      background: violet;
+      border-radius: 50%;
+      height: 1.5rem;
+      padding: 0.3rem;
+      width: 1.5rem;
+    }
+
+    &__title {
+      font: 100% $font-stack-gilroy-bl;
+      font-size: .75rem;
+      margin: 0.5rem;
+    }
+
+    &__fav {
+      width: 1.5rem;
+      height: 1.5rem;
+      align-self: center;
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    &__main-title {
+      font-size: 1.6rem;
+    }
+
+    &__box {
+      cursor: pointer;
+    }
+
+    &__container {
+      width: 19vw;
+    }
+
+    &__icons {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1%;
+      margin-left: -3%;
+    }
+
+    &__title {
+      font: 100% $font-stack-gilroy-bl;
+      font-size: 1rem;
+      margin: 0.5rem;
+    }
+
+    &__fav {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}

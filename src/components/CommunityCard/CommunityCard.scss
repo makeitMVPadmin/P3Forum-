@@ -1,0 +1,85 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+
+.community-card {
+  display: none;
+ 
+  @media (min-width: $tablet-breakpoint) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.7rem;
+    width: 23vw;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__logo {
+      width: 2.0rem;
+      height: 2.0rem;
+      padding: 0.3rem;
+      border-radius: 50%;
+    }
+
+    &__title {
+      font: 100% $font-stack-gilroy-bl;
+      font-size: 0.75rem;
+      margin: 0.5rem;
+    }
+
+    &__favorite {
+      width: 1.5rem;
+      height: 1.5rem;
+      align-self: center;
+    }
+
+    &__favorite:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: .7rem;
+    width: 21vw;
+   
+
+    &__container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__logo {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-left: 10%;
+      padding: 0.3rem;
+      border-radius: 50%;
+    }
+
+    &__title {
+      font: 100% $font-stack-gilroy-bl;
+      font-size: 1rem;
+      letter-spacing: -0.349px;
+      margin: 0.5rem;
+      width: 100px;
+    }
+
+    &__favorite {
+      width: 3rem;
+      height: 3rem;
+      align-self: center;
+    }
+  } 
+}
+

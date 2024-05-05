@@ -1,0 +1,44 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+$font-stack-gilroy-lt: 'Gilroy-Light', serif;
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+
+.error {
+  &__container {
+    background-color: #FFF;
+    display: flex;
+    height: 92vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font: 100% $font-stack-gilroy-bl;
+  }
+
+  &__title {
+   font-size: 2.2rem;
+   margin: 2% 0 1% 0
+  }
+
+  &__message {
+    font-size: 1rem;
+    margin-bottom: 1%;
+   }
+
+   &__exit {
+    display: flex;
+    margin-top: -60%;;
+   }
+
+   &__return-box {
+    height: 60vh;
+   }
+
+   &__home {
+    color: black;
+    font: 100% $font-stack-gilroy-lt;
+    font-size: 1.3rem;
+    text-decoration: none !important;
+   }
+}

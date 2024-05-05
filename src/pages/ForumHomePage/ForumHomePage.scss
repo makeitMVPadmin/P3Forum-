@@ -1,0 +1,32 @@
+@use "../../styles/partials/_typography" as *;
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+$font-stack-gilroy-lt: 'Gilroy-Light', serif;
+$font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+
+.home {
+    display: flex;
+    flex-direction: row;
+    font: 100% $font-stack-gilroy-bl;
+    justify-content: space-between;
+    
+    width: 100vw;
+}
+
+.home-body {
+    width: 90%;
+    padding: 2.5rem 1rem;
+    // background: #BFE5FF;
+
+    @media (min-width: $tablet-breakpoint) {
+        width: 70%;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        width: 75%;
+    }
+
+}
