@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../../context";
 import defaultUser from "../../assets/icons/defaultUser.svg"
+import closeIcon from '../../assets/icons/black-cross.svg'
 import "./QuestionModal.scss";
 
 
@@ -31,12 +32,16 @@ const QuestionModal = ({ onClose, isModalOpen, newTopic, setNewTopic, newQuestio
   return (
     <>
       {isModalOpen && (
-        <div className="question-modal--overlay">
+        <div className="question-modal">
           <div className="question-modal__container">
-          
             <img src={randomUser2?.profilePhoto ? randomUser2?.profilePhoto : defaultUser} alt="Profile Pic" className="question-modal__profile--img"/>
             <div className="question-modal__form">
-              <input
+              <div className="question-modal__close-container">
+                <button className="question-modal__close--button" onClick={handleCancel}>
+                  <img className="question-modal__close" src={closeIcon} alt='Close modal icon'/>
+                </button>
+              </div>
+              <textarea
                 required
                 className={`question-modal__topic ${topicError ? "error" : ""}`}
                 type="text"

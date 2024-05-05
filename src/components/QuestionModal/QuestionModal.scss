@@ -4,7 +4,7 @@
 
 $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
-.question-modal--overlay {
+.question-modal {
   position: fixed;
   bottom: 0rem;
   left: 0;
@@ -14,226 +14,56 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-@media (min-width: $desktop-breakpoint) {
-.question-modal__container {
-  width: 55%;
-  height: 45%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: baseline;
-  margin-bottom: 1.5rem;
-  border-radius: 16px;
-  background: #fff;
-}
-
-.question-modal__profile--img {
-  width: 2.8rem;
-  height: 2.8rem;
-  margin-left: 2.3rem;
-  margin-bottom: 20rem;
-  border-radius: 50%;
-}
-.question-modal__form {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5rem;
-  margin-right: 6rem;
-}
-.question-modal__topic {
-  text-align: left;
-  width: 105%;
-  font-size: 1.6rem;
-  font: 100% $font-stack-gilroy-bl;
-  font-size: 1.6rem;
-  letter-spacing: -0.349px;
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #000;
-  // margin-bottom: 1rem;
-  padding: 10px 0px 10px 18px;
-}
-.question-modal__description {
-  // @include forum-textFormat(1.6rem);
-  font: 100% $font-stack-gilroy-bl;
-  width: 105%;
-  font-size: 1.6rem;
-  letter-spacing: -0.349px;
-  border-radius: 8px;
-  border: 1px solid #000;
-  padding: 0.5rem 0rem 9rem 1rem;
-  margin-top: 1.3rem;
-}
-.question-modal__form--buttons {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  
-}
-.question-modal__cancel--button {
-  width: 7.5rem;
-  height: 3rem;
-  letter-spacing: -0.349px;
-  margin: 1.2rem;
-padding:  0 .5rem;
-  border-radius: 8px;
-  border: 3px solid #000;
-  background: #fff;
-  font: 100% $font-stack-gilroy-bl;
-  font-size: 1.7rem;
-  cursor: pointer;
-}
-.question-modal__post--button {
-  width: 6rem;
-  height: 3rem;
-  background-color: #FFD22F;
-  letter-spacing: -0.349px;
-  border-radius: 8px;
-  border: 3px solid #000;
-  font: 100% $font-stack-gilroy-bl;
-  font-size: 1.7rem;
-  cursor: pointer;
-}
-
-.question-modal__cancel--button:hover {
-  background-color:#ce0606;
-  cursor: pointer;
-}
-
-.question-modal__post--button:hover {
-  background-color:#a58a27;
-  cursor: pointer;
-}
-
-.error {
-  background-color: lightblue;
-}
-
-
-}
-
-@media (max-width: $tablet-breakpoint) {
-
-.question-modal__container {
-  width: 90%;
-  height: 30%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: baseline;
-  margin-bottom: 1.5rem;
-  border-radius: 16px;
-  background: #fff;
-}
-
-.question-modal__profile--img {
-  width: 2rem;
-  height: 2rem;
-  margin-left: 1rem;
-  margin-bottom: 11.5rem;
-  border-radius: 50%;
-}
-.question-modal__form {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-  margin-right: 7rem;
-}
-.question-modal__topic {
-  text-align: left;
-  width: 105%;
-  font-size: 1.6rem;
-  font: 100% $font-stack-gilroy-bl;
-  font-size: 1rem;
-  letter-spacing: -0.349px;
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #000;
-  // margin-bottom: 1rem;
-  padding: 5px 0px 5px 18px;
-}
-.question-modal__description {
-
-  font: 100% $font-stack-gilroy-bl;
-  width: 105%;
-  font-size: 1rem;
-  letter-spacing: -0.349px;
-  border-radius: 8px;
-  border: 1px solid #000;
-  padding: 0.5rem 0rem 4rem 1rem;
-  margin-top: 1.3rem;
-}
-.question-modal__form--buttons {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  
-}
-.question-modal__cancel--button {
-  width: 5.5rem;
-  height: 2.5rem;
-  letter-spacing: -0.349px;
-  margin: 1.2rem;
-
-  border-radius: 8px;
-  border: 3px solid #000;
-  background: #fff;
-  font: 100% $font-stack-gilroy-bl;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.question-modal__post--button {
-  width: 4rem;
-  height: 2.5rem;
-  background-color: #FFD22F;
-  letter-spacing: -0.349px;
-  border-radius: 8px;
-  border: 3px solid #000;
-  font: 100% $font-stack-gilroy-bl;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-
-
-}
-@media (max-width: $mobile-breakpoint) {
-
-  .question-modal__container {
-    width: 92%;
-    height: 45%;
+  &__container {
+    width: 90%;
+    height: 20rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     align-content: baseline;
-    margin-bottom: 1.5rem;
     border-radius: 16px;
     background: #fff;
+    padding: 3rem 0.5rem 2.5rem 0.5rem;
   }
-  
-  .question-modal__profile--img {
-    width: 2rem;
-    height: 2rem;
-    margin-left: 1rem;
-    margin-bottom: 11.5rem;
-    border-radius: 50%;
+
+  &__profile--img {
+    display: none;
   }
-  .question-modal__form {
+
+  &__form {
     width: 90%;
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
-  
   }
-  .question-modal__topic {
-    text-align: left;
 
+  &__close-container {
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+  }
+
+  &__close--button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    background: none;
+  }
+
+  &__close--button:hover {
+    cursor: pointer;
+  }
+
+  &__close {
+    width: 1rem;
+    height: 1rem;
+    justify-self: flex-end;
+  }
+
+  &__topic {
+    text-align: left;
     font-size: 1rem;
     font: 100% $font-stack-gilroy-bl;
     font-size: 1rem;
@@ -241,28 +71,30 @@ padding:  0 .5rem;
     background: #fff;
     border-radius: 8px;
     border: 1px solid #000;
-
-    padding: 5px 0px 5px 18px;
+    padding: 1rem 0 0 1rem;
   }
-  .question-modal__description {
-  
+
+  .error {
+    background-color: $s-red;
+  }
+
+  &__description {
     font: 100% $font-stack-gilroy-bl;
-    // width: 105%;
     font-size: 1rem;
     letter-spacing: -0.349px;
     border-radius: 8px;
     border: 1px solid #000;
-    padding: 0.5rem 0rem 4rem 1rem;
+    padding: 0.5rem 0rem 10rem 1rem;
     margin-top: 1.3rem;
   }
-  .question-modal__form--buttons {
+
+  &__form--buttons {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
-    
   }
-  .question-modal__cancel--button {
+
+  &__cancel--button {
     width: 5rem;
     height: 2rem;
     letter-spacing: -0.349px;
@@ -275,7 +107,8 @@ padding:  0 .5rem;
     font-size: 1rem;
     cursor: pointer;
   }
-  .question-modal__post--button {
+
+  &__post--button {
     width: 3.5rem;
     height: 2rem;
     background-color: #FFD22F;
@@ -286,7 +119,245 @@ padding:  0 .5rem;
     font-size: 1rem;
     cursor: pointer;
   }
-  
-  
-  
+
+  @media (min-width: $tablet-breakpoint) {
+    &__container {
+      width: 85%;
+      height: 25rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      align-content: baseline;
+      border-radius: 16px;
+      background: #fff;
+      padding: 0 3rem 0 0;
+    }
+
+    &__profile--img {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: -2rem;
+      border-radius: 50%;
+      display: flex;
+      align-self: start;
+      margin-top: 2.5rem;
+    }
+
+    &__form {
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+
+    &__close-container {
+      width: 5%;
+      height: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0;
+      margin-left: 102%;
+      margin-bottom: -3%;
+    }
+
+    &__close--button {
+      width: 2rem;
+      height: 2rem;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+
+    &__close--button:hover {
+      cursor: pointer;
+    }
+
+    &__close {
+      width: 1.25rem;
+      height: 1.25rem;
+      justify-self: flex-end;
+    }
+
+    &__topic {
+      height: 2rem;
+      text-align: left;
+      font-size: 1.6rem;
+      font: 100% $font-stack-gilroy-bl;
+      font-size: 1rem;
+      letter-spacing: -0.349px;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid #000;
+      padding: 0.5rem 0 0 1rem;
+    }
+
+    &__description {
+      font: 100% $font-stack-gilroy-bl;
+      font-size: 1rem;
+      letter-spacing: -0.349px;
+      border-radius: 8px;
+      border: 1px solid #000;
+      padding: 0.5rem 0rem 10rem 1rem;
+      margin-top: 1.3rem;
+    }
+
+    &__form--buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      
+    }
+
+    &__cancel--button {
+      width: 5.5rem;
+      height: 2.5rem;
+      letter-spacing: -0.349px;
+      margin: 1.2rem;
+      border-radius: 8px;
+      border: 3px solid #000;
+      background: #fff;
+      font: 100% $font-stack-gilroy-bl;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    &__post--button {
+      width: 4rem;
+      height: 2.5rem;
+      background-color: #FFD22F;
+      letter-spacing: -0.349px;
+      border-radius: 8px;
+      border: 3px solid #000;
+      font: 100% $font-stack-gilroy-bl;
+      font-size: 1rem;
+      cursor: pointer;
+    }
   }
+
+  @media (min-width: $desktop-breakpoint) {
+    &__container {
+        width: 90%;
+        height: 27rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: baseline;
+        border-radius: 16px;
+        background: #fff;
+      }
+
+      &__profile--img {
+        width: 3.4rem;
+        height: 3.4rem;
+        margin-right: -2rem;
+        border-radius: 50%;
+        display: flex;
+        align-self: start;
+        margin-top: 2rem;
+      }
+
+      &__form {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        margin-right: 6rem;
+      }
+
+      &__close-container {
+        width: 5%;
+        height: 1rem;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        margin-left: 113%;
+        margin-bottom: -2%;
+      }
+
+      &__close--button {
+        width: 3rem;
+        height: 3rem;
+        border: none;
+        background: none;
+      }
+
+      &__close--button:hover {
+        cursor: pointer;
+      }
+
+      &__close {
+        width: 2rem;
+        height: 2rem;
+        justify-self: flex-end;
+      }
+
+      &__topic {
+        text-align: left;
+        width: 105%;
+        height: 2.5rem;
+        font-size: 1.6rem;
+        font: 100% $font-stack-gilroy-bl;
+        font-size: 1.6rem;
+        letter-spacing: -0.349px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #000;
+        padding: 0.5rem 0 0 1rem;
+      }
+
+      &__description {
+        font: 100% $font-stack-gilroy-bl;
+        width: 105%;
+        font-size: 1.6rem;
+        letter-spacing: -0.349px;
+        border-radius: 8px;
+        border: 1px solid #000;
+        padding: 0.5rem 0rem 9rem 1rem;
+        margin-top: 1.3rem;
+      }
+
+      &__form--buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 1rem;
+        margin-right: -3.5rem;
+      }
+
+      &__cancel--button {
+        width: 7.5rem;
+        height: 3rem;
+        letter-spacing: -0.349px;
+        margin: 1.2rem;
+        padding:  0 .5rem;
+        border-radius: 8px;
+        border: 3px solid #000;
+        background: #fff;
+        font: 100% $font-stack-gilroy-bl;
+        font-size: 1.7rem;
+        cursor: pointer;
+      }
+
+      &__post--button {
+        width: 6rem;
+        height: 3rem;
+        background-color: #FFD22F;
+        letter-spacing: -0.349px;
+        border-radius: 8px;
+        border: 3px solid #000;
+        font: 100% $font-stack-gilroy-bl;
+        font-size: 1.7rem;
+        cursor: pointer;
+      }
+
+      &__cancel--button:hover {
+        background-color:#ce0606;
+        cursor: pointer;
+      }
+
+      &__post--button:hover {
+        background-color:#a58a27;
+        cursor: pointer;
+    }
+  }
+}
