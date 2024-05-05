@@ -86,12 +86,12 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
 
   &__user-text {
     font: 100% $font-stack-gilroy-bl;
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin: 5px;
   }
 
   &__content-text {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   &__actions {
@@ -123,9 +123,18 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     padding: 0.5rem;
   }
 
+  .reply {
+    width: 31%;
+    margin-left: -65%;
+  }
+
+  &__comment {
+    height: 60%;
+  }
+
   &__upvote,
   &__downvote,
-  &__comment,
+  // &__comment,
   &__share {
     height: 4vh;
   }
@@ -243,35 +252,29 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     &__user-text {
       font: 100% $font-stack-gilroy-bl;
       margin: 5px;
-      font-size: 1.6rem;
-    }
-
-    &__content-text {
-      font: 100% $font-stack-gilroy-lt;
-      font-size: 1.2rem;
-      margin: 1% 4% 4% 10%;
+      font-size: 1.4rem;
     }
 
     &__actions {
       display: flex;
       margin: 0 0 3% 0;
-      font-size: 1.68rem;
+      font-size: 1.2rem;
     }
 
     &__up-down-container {
       display: flex;
       border: #000000 solid 1px;
-      border-radius: 19px;
+      // border-radius: 8px;
       height: 3.75rem;
       justify-content: center;
-      width: 13rem;
+      width: 12rem;
       margin: 0 1.5rem;
     }
 
     &__icon-container {
       display: flex;
       border: #3e3e3e solid 1px;
-      border-radius: 19px;
+      // border-radius: 19px;
       height: 3.75rem;
       justify-content: center;
       align-items: center;
@@ -281,7 +284,7 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100px;
+      width: 90%;
     }
 
     &__upvote,
@@ -293,6 +296,7 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
 
     &__downvote {
       border-left: #3e3e3e solid 1px;
+      margin-left: -30%;
       padding-left: 10px;
     }
 
@@ -311,17 +315,7 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     }
 
     .reply {
-      width: 154px;
-    }
-    &__value {
-      margin-left: 1rem;
-    }
-  }
-
-  @media (min-width: $desktop-breakpoint) {
-    &__content-text {
-      font-size: 1.68rem;
-      margin: 1% 4% 4% 8%;
+      margin-left: 1%;
     }
   }
 }
