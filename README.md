@@ -40,7 +40,7 @@
 ## About
 THIS IS OUR FABULOUS PROJECT AND SOME OTHER STUFF
 
-| Destktop View | Mobile View |
+| Desktop View | Mobile View |
 |---------------|-----------------|
 <img src="src/assets/readmeImages/desktop-demo.gif" width=100%>|<p align="center"><br/><img src="src/assets/readmeImages/mobile-demo.gif" width=57%></p>
 
