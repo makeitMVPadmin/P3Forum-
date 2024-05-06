@@ -3,7 +3,7 @@
 <!-- HEADER -->
 <p align="center">
   <img src="src/assets/readmeImages/dark-mode.svg" alt="Dark" id="dark-mode-image" media="(prefers-color-scheme: dark)">
-  <img src="src/assets/readmeImages/light-mode.svg" alt="Light" id="light-mode-image" media="(prefers-color-scheme: dark)">
+  <img src="src/assets/readmeImages/light-mode.svg" alt="Light" id="light-mode-image" media="(prefers-color-scheme: light)">
 </p>
 
 <h1 align="center">Forum</h1>
