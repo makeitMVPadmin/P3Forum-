@@ -2,13 +2,13 @@
 
 <!-- HEADER -->
 <p align="center">
-  <img src="src/assets/readmeImages/dark-mode.svg" alt="Dark" id="dark-mode-image" media="(prefers-color-scheme: dark)">
-  <img src="src/assets/readmeImages/light-mode.svg" alt="Light" id="light-mode-image" media="(prefers-color-scheme: light)">
+<!--   <img src="src/assets/readmeImages/dark-mode.svg" alt="Dark" id="dark-mode-image" media="(prefers-color-scheme: dark)"> -->
+<!--   <img src="src/assets/readmeImages/light-mode.svg" alt="Light" id="light-mode-image" media="(prefers-color-scheme: light)"> -->
   <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GiorgosXou/Random-stuff/main/Programming/StackOverflow/Answers/70200610_11465149/w.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/GiorgosXou/Random-stuff/main/Programming/StackOverflow/Answers/70200610_11465149/b.png">
+    <source media="(prefers-color-scheme: dark)" srcset="src/assets/readmeImages/dark-mode.svg">
+    <source media="(prefers-color-scheme: light)" srcset="src/assets/readmeImages/light-mode.svg">
 <!--   <img alt="Shows a black logo in light color mode and a white one in dark color mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png"> -->
-</picture>
+  </picture>
 </p>
 
 <h1 align="center">Forum</h1>
