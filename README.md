@@ -2,8 +2,8 @@
 
 <!-- HEADER -->
 <p align="center">
-  <img media="(prefers-color-scheme: dark) src="src/assets/readmeImages/dark-mode.svg" alt="Dark" id="dark-mode-image">
-  <img media="(prefers-color-scheme: light) src="src/assets/readmeImages/light-mode.svg" alt="Light" id="light-mode-image">
+  <img src="src/assets/readmeImages/dark-mode.svg#gh-dark-mode-only" alt="Dark" id="dark-mode-image">
+  <img src="src/assets/readmeImages/light-mode.svg#gh-light-mode-only" alt="Light" id="light-mode-image">
 <!--   <picture> -->
 <!--     <source media="(prefers-color-scheme: dark)" src="src/assets/readmeImages/dark-mode.svg"> -->
 <!--     <source media="(prefers-color-scheme: light)" src="src/assets/readmeImages/light-mode.svg"> -->
