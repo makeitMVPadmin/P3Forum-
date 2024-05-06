@@ -1,91 +1,124 @@
+<a name="readme-top"></a>
 
-# MakeItMVP Launch Academy Starter Repository
+<!-- HEADER -->
+<p align="center">
+  <img src="https://gist.github.com/assets/63877492/028c19cb-40a6-4668-aa95-f34d196ad5b2" alt="Dark" id="dark-mode-image">
+  <img src="https://gist.github.com/assets/63877492/5d14109b-1121-4a7a-86c8-e1b569f763c6" alt="Light" id="light-mode-image">
+</p>
 
-Welcome to the MakeItMVP Launch Academy Starter Repository! This repository is designed to provide new junior developers with a structured starting point for their assigned projects. It's built using React and Sass to help you get up and running quickly.
+<style>
+  @media (prefers-color-scheme: dark) {
+    #dark-mode-image {
+      display: block;
+    }
+    #light-mode-image {
+      display: none;
+    }
+  }
 
-## Table of Contents
+  @media (prefers-color-scheme: light) {
+    #dark-mode-image {
+      display: none;
+    }
+    #light-mode-image {
+      display: block;
+    }
+  }
+</style>
 
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
+<h1 align="center">Forum</h1>
 
-## Getting Started
+<h3 align="center">A Place To Get Curious</h3>
 
-To begin working on your project, follow these steps:
+<h4 align="center"><a href=""><strong>Visit the site</strong></h4>
 
-1. Clone this repository to your local machine:
+<p></p>
 
-   ```bash
-   git clone https://github.com/MakeItMVP/LaunchAcademyStarter.git
-   ```
-````
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ul>
+    <li>
+      <a href="#about">About</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#roadmap">Roadmap</a>
+      <ul>
+        <li><a href="#planning">Planning</a></li>
+        <li><a href="#building">Building</a></li>
+        <li><a href="#future-iterations">Future Iterations</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</details>
 
-2. Change your working directory to the cloned repository:
+## About
+THIS IS OUR FABULOUS PROJECT AND SOME OTHER STUFF
 
-   ```bash
-   cd LaunchAcademyStarter
-   ```
+| Destktop View | Mobile View |
+|---------------|-----------------|
+<img src="https://gist.github.com/assets/63877492/b0782119-f094-41ec-83a2-efbff1b220a2" width=100%>|<p align="center"><br/><img src="https://gist.github.com/assets/63877492/095af197-8874-44fb-95f1-4e910e79ea76" width=57%></p>
 
-3. Install the project dependencies:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-   ```bash
-   npm install
-   ```
+### Built With
+![React][React-shield]
+![SASS][SASS-shield]
+![Firebase][Firebase-shield]
 
-4. Start the development server:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-   ```bash
-   npm start
-   ```
+## Features
 
-5. Open your web browser and navigate to `http://localhost:3000` to see your project running.
+## Setup
+- Clone the repository to your local machine
+- `cd` into the repository
+- Make sure the necessary dependencies are installed on your local machine (`NPM`, `react-router-dom`)
+- Once the necessary dependencies are installed, `cd` back into the root of the repository, and run `npm start`
+- Explore and enjoy!
 
-Now you're ready to start building your project using the provided structure!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Project Structure
+## Roadmap
 
-The project structure is organized as follows:
+### Planning
 
-```
-├── src/
-│   ├── components/
-│   │   ├── App.js
-│   │   ├── ...
-│   ├── styles/
-│   │   ├── main.scss
-│   │   ├── ...
-│   ├── index.js
-├── public/
-│   ├── index.html
-│   ├── ...
-├── package.json
-├── README.md
-```
+### Building
 
-- `src/`: Contains the main source code for your project, including React components and styles.
-- `public/`: Contains static assets and your project's HTML template.
-- `package.json`: Defines project dependencies and scripts.
+### Future Iterations
 
-Feel free to customize the project structure to fit your specific project requirements.
+## Contact
+<u>**Developers**</u><br>
+Anthony Shellman | [LinkedIn](https://www.linkedin.com/in/anthonyshellman/) | [GitHub](https://github.com/Ant-Shell)<br>
+Dayana Romero Villavicencio | [LinkedIn](https://www.linkedin.com/in/dayana-romero/) | [GitHub](https://github.com/drv0228)<br>
+Dinne Kopelevich | [LinkedIn](https://www.linkedin.com/in/dinne-kopelevich-174584a/) | [GitHub](https://github.com/DinneK)<br>
 
-## Technologies
+<u>**Designers**</u><br>
+Samreen Mamaparo | [LinkedIn](https://www.linkedin.com/in/samreenmamaparo/)<br>
+Lucy Zhang<br>
+Vincent Ng<br>
 
-This starter repository uses the following technologies:
+<u>**Project Manager**</u><br>
+Brajesh<br>
 
-- React: A JavaScript library for building user interfaces.
-- Sass: A CSS extension language that adds features like variables, nesting, and more.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can expand upon these technologies as needed for your project.
-
-## Contributing
-
-We welcome contributions from the community. If you have suggestions or improvements for this starter repository, please open an issue or create a pull request. For more information on how to contribute, check our [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[React-shield]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[SASS-shield]: https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white
+[Firebase-shield]: https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white
 
 ```
 
