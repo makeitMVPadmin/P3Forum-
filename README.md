@@ -42,7 +42,7 @@ THIS IS OUR FABULOUS PROJECT AND SOME OTHER STUFF
 
 | Desktop View | Mobile View |
 |---------------|-----------------|
-<img src="src/assets/readmeImages/desktop-demo.gif" width=100%>|<p align="center"><br/><img src="src/assets/readmeImages/mobile-demo.gif" width=57%></p>
+<img src="src/assets/readmeImages/desktop-demo.gif" width=100%>|<p align="center"><br/><img src="src/assets/readmeImages/mobile-demo.gif" width=60%></p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
