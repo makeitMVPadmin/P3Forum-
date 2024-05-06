@@ -2,8 +2,9 @@
 
 <!-- HEADER -->
 <p align="center">
-  <img src="https://gist.github.com/assets/63877492/028c19cb-40a6-4668-aa95-f34d196ad5b2.png" alt="Dark" id="dark-mode-image">
-  <img src="https://gist.github.com/assets/63877492/5d14109b-1121-4a7a-86c8-e1b569f763c6.png" alt="Light" id="light-mode-image">
+  <img src="src/assets/readmeImages/dark-mode.svg" alt="Dark" id="dark-mode-image">
+  <img src="src/assets/readmeImages/light-mode.svg" alt="Light" 
+  id="light-mode-image">
 </p>
 
 <style>
@@ -62,7 +63,7 @@ THIS IS OUR FABULOUS PROJECT AND SOME OTHER STUFF
 
 | Destktop View | Mobile View |
 |---------------|-----------------|
-<img src="https://gist.github.com/assets/63877492/b0782119-f094-41ec-83a2-efbff1b220a2" width=100%>|<p align="center"><br/><img src="https://gist.github.com/assets/63877492/095af197-8874-44fb-95f1-4e910e79ea76" width=57%></p>
+<img src="src/assets/readmeImages/desktop-demo.gif" width=100%>|<p align="center"><br/><img src="src/assets/readmeImages/mobile-demo.gif" width=57%></p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
