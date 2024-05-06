@@ -7,25 +7,16 @@
   id="light-mode-image">
 </p>
 
-<style>
-  @media (prefers-color-scheme: dark) {
-    #dark-mode-image {
-      display: block;
-    }
-    #light-mode-image {
-      display: none;
-    }
+<script>
+  const darkModeImage = document.getElementById('dark-mode-image');
+  const lightModeImage = document.getElementById('light-mode-image');
+  
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    darkModeImage.style.display = 'block';
+  } else {
+    lightModeImage.style.display = 'block';
   }
-
-  @media (prefers-color-scheme: light) {
-    #dark-mode-image {
-      display: none;
-    }
-    #light-mode-image {
-      display: block;
-    }
-  }
-</style>
+</script>
 
 <h1 align="center">Forum</h1>
 
