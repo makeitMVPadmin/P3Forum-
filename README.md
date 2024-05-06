@@ -2,8 +2,8 @@
 
 <!-- HEADER -->
 <p align="center">
-  <img src="https://gist.github.com/assets/63877492/028c19cb-40a6-4668-aa95-f34d196ad5b2" alt="Dark" id="dark-mode-image">
-  <img src="https://gist.github.com/assets/63877492/5d14109b-1121-4a7a-86c8-e1b569f763c6" alt="Light" id="light-mode-image">
+  <img src="https://gist.github.com/assets/63877492/028c19cb-40a6-4668-aa95-f34d196ad5b2.png" alt="Dark" id="dark-mode-image">
+  <img src="https://gist.github.com/assets/63877492/5d14109b-1121-4a7a-86c8-e1b569f763c6.png" alt="Light" id="light-mode-image">
 </p>
 
 <style>
