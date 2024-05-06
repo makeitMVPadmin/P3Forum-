@@ -30,7 +30,7 @@
       <ul>
         <li><a href="#planning">Planning</a></li>
         <li><a href="#building">Building</a></li>
-        <li><a href="#future-iterations">Future Iterations</a></li>
+        <li><a href="#possibilities">Possibilities</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
