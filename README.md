@@ -4,11 +4,6 @@
 <p align="center">
   <img src="src/assets/readmeImages/dark-mode.svg#gh-dark-mode-only" alt="Dark" id="dark-mode-image">
   <img src="src/assets/readmeImages/light-mode.svg#gh-light-mode-only" alt="Light" id="light-mode-image">
-<!--   <picture> -->
-<!--     <source media="(prefers-color-scheme: dark)" src="src/assets/readmeImages/dark-mode.svg"> -->
-<!--     <source media="(prefers-color-scheme: light)" src="src/assets/readmeImages/light-mode.svg"> -->
-<!--   <img alt="Shows a black logo in light color mode and a white one in dark color mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png"> -->
-<!--   </picture> -->
 </p>
 
 <h1 align="center">Forum</h1>
@@ -75,7 +70,7 @@ THIS IS OUR FABULOUS PROJECT AND SOME OTHER STUFF
 
 ### Building
 
-### Future Iterations
+### Possibilities
 
 ## Contact
 <u>**Developers**</u><br>
