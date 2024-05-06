@@ -2,21 +2,9 @@
 
 <!-- HEADER -->
 <p align="center">
-  <img src="src/assets/readmeImages/dark-mode.svg" alt="Dark" id="dark-mode-image">
-  <img src="src/assets/readmeImages/light-mode.svg" alt="Light" 
-  id="light-mode-image">
+  <img src="src/assets/readmeImages/dark-mode.svg" alt="Dark" id="dark-mode-image" style="display: none;">
+  <img src="src/assets/readmeImages/light-mode.svg" alt="Light" id="light-mode-image" style="display: none;">
 </p>
-
-<script>
-  const darkModeImage = document.getElementById('dark-mode-image');
-  const lightModeImage = document.getElementById('light-mode-image');
-  
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    darkModeImage.style.display = 'block';
-  } else {
-    lightModeImage.style.display = 'block';
-  }
-</script>
 
 <h1 align="center">Forum</h1>
 
