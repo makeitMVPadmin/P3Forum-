@@ -52,8 +52,6 @@ Built with React, Sass and Firebase, we’ve crafted a dynamic platform where us
 |---------------|-----------------|
 <img src="src/assets/readmeImages/desktop-demo.gif" width=100%>|<p align="center"><br/><img src="src/assets/readmeImages/mobile-demo.gif" width=60%></p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Built With
 ![React][React-shield]
 ![SASS][SASS-shield]
@@ -69,6 +67,7 @@ Built with React, Sass and Firebase, we’ve crafted a dynamic platform where us
 - Question and answer sorting by upvote, downvote and date
 - Robust error handling for various scenarios
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Setup
 - Clone the repository to your local machine
