@@ -79,12 +79,12 @@ Dayana Romero Villavicencio | [LinkedIn](https://www.linkedin.com/in/dayana-rome
 Dinne Kopelevich | [LinkedIn](https://www.linkedin.com/in/dinne-kopelevich-174584a/) | [GitHub](https://github.com/DinneK)<br>
 
 **Designers**<br>
-Samreen Mamaparo | [LinkedIn](https://www.linkedin.com/in/samreenmamaparo/)<br>
-Lucy Zhang<br>
-Vincent Ng<br>
+Samreen Mamaparo | [LinkedIn](https://www.linkedin.com/in/samreenmamaparo/) | [Portfolio](https://www.samreenmamaparo.com/)<br>
+Lucy Zhang | <br>
+Vincent Ng | [LinkedIn](https://www.linkedin.com/in/thevincentng/) | [Portfolio](https://www.thevincentng.com/)<br>
 
 **Project Manager**<br>
-Brajesh<br>
+Brajesh K. Singh | [LinkedIn](https://www.linkedin.com/in/brajeshksingh/)<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
