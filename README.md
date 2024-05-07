@@ -45,8 +45,8 @@
 </details>
 
 ## About
-Welcome to Forum - where every question sparks a question and every answer drives progress in the world of technology.<br><br>
-Built with React, Sass and Firebase, we’ve crafted a dynamic platform where users can ask questions, share insights and engage in a global community of tech enthusiasts.
+Welcome to Forum - where every question sparks a conversation and every answer drives progress in the world of technology.<br><br>
+Built with React, Sass, and Firebase, we’ve crafted a dynamic platform where users can ask questions, share insights, and engage in a global community of tech enthusiasts.
 
 | Desktop View | Mobile View |
 |---------------|-----------------|
