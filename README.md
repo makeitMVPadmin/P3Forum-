@@ -73,17 +73,17 @@ THIS IS OUR FABULOUS PROJECT AND SOME OTHER STUFF
 ### Possibilities
 
 ## Contact
-<u>**Developers**</u><br>
+**Developers**<br>
 Anthony Shellman | [LinkedIn](https://www.linkedin.com/in/anthonyshellman/) | [GitHub](https://github.com/Ant-Shell)<br>
 Dayana Romero Villavicencio | [LinkedIn](https://www.linkedin.com/in/dayana-romero/) | [GitHub](https://github.com/drv0228)<br>
 Dinne Kopelevich | [LinkedIn](https://www.linkedin.com/in/dinne-kopelevich-174584a/) | [GitHub](https://github.com/DinneK)<br>
 
-<u>**Designers**</u><br>
+**Designers**<br>
 Samreen Mamaparo | [LinkedIn](https://www.linkedin.com/in/samreenmamaparo/)<br>
 Lucy Zhang<br>
 Vincent Ng<br>
 
-<u>**Project Manager**</u><br>
+**Project Manager**<br>
 Brajesh<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
