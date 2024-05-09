@@ -3,12 +3,12 @@
   "name": "Forum",
   "icons": [
     {
-      "src": "public/logoMVP.png",
+      "src": "logoMVP.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "public/logoMVP.png",
+      "src": "logoMVP.png",
       "type": "image/png",
       "sizes": "512x512"
     }
