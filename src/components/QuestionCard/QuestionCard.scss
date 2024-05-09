@@ -2,7 +2,6 @@
 @use "../../styles/partials/_variables" as *;
 @use "../../styles/partials/_mixins" as *;
 
-// $font-stack-gilroy-lt: 'Gilroy-Light', serif;
 $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
 
 .question-card {
@@ -108,7 +107,6 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
   }
 
   &__value {
-    // font: 100% $font-stack-gilroy-bl;
     margin-right: -10px;
   }
 

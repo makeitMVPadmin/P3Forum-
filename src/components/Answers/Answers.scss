@@ -134,7 +134,6 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
 
   &__upvote,
   &__downvote,
-  // &__comment,
   &__share {
     height: 4vh;
   }
@@ -264,7 +263,6 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     &__up-down-container {
       display: flex;
       border: #000000 solid 1px;
-      // border-radius: 8px;
       height: 3.75rem;
       justify-content: center;
       width: 12rem;
@@ -274,7 +272,6 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
     &__icon-container {
       display: flex;
       border: #3e3e3e solid 1px;
-      // border-radius: 19px;
       height: 3.75rem;
       justify-content: center;
       align-items: center;

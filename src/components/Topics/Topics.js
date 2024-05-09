@@ -1,6 +1,4 @@
 import "./Topics.scss";
-// import { useGlobalContext } from "../../context";
-// import TopicCard from "../TopicCard/TopicCard";
 import Icon1 from "../../assets/icons/icon1.svg";
 import Icon2 from "../../assets/icons/icon2.svg";
 import Icon3 from "../../assets/icons/icon3.svg";

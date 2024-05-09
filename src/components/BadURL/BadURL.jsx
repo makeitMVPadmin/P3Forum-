@@ -3,7 +3,7 @@ import ErrorImaage from "../../assets/error-image.png"
 import Undo from "../../assets/undo.svg"
 import "./BadURL.scss"
 
-function BadURL({ errorType }) {
+function BadURL() {
   let errorMessage = "This Page Doesn't Exist!";
 
   return (

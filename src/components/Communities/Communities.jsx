@@ -15,7 +15,6 @@ const Communities = () => {
     )
   })
 
-
   return (
     <section className='communities'>
       <h2 className='communities__title'>Communities</h2>

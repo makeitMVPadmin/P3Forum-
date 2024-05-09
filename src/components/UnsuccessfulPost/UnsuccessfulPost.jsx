@@ -14,9 +14,7 @@ const UnsuccessfulPost = ({ onClose }) => {
   return (
     <div className="unsuccessfulpost-modal__overlay">
       <div className="unsuccessfulpost-modal__popUp">
-  
-       <img className="unsuccessfulpost-modal__icon" src={unsuccessfulicon} alt="icon showing unsucessful post" />
-        
+        <img className="unsuccessfulpost-modal__icon" src={unsuccessfulicon} alt="icon showing unsucessful post" />
         <p className="unsuccessfulpost-modal__text">Unsuccessful Post, Please Try Again</p>
       </div>
     </div>

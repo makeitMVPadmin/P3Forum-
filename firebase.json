@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "forum-630fc",
-    "public": "public",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
