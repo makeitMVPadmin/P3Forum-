@@ -12,6 +12,10 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
   width: 100%;
   background: #FFF;
 
+  &__main-icon {
+    margin-left: 5px;
+  }  
+
   &__main-image {
     height: 4vh;
   }
@@ -84,7 +88,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
     }
 
     &__main-icon {
-      margin-left: -25px;
+      margin-left: -15px;
     }  
 
     &__main-image {

@@ -30,10 +30,10 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
 
   &__input {
     border: none;
-    color: #9b9b9b;
+    color: #000000;
     font: 100% $font-stack-gilroy-bl;
     line-height: 24.5px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     height: 25vh;
     margin: 5px;
   }
@@ -55,7 +55,7 @@ $font-stack-gilroy-bl: "Gilroy-ExtraBold", serif;
   &__button-cancel,
   &__button-post {
     background: #fff;
-    border: 1.5px solid #000000;
+    border: 3px solid #000000;
     border-radius: 4px;
     font: 100% $font-stack-gilroy-bl;
     line-height: 33.08px;
