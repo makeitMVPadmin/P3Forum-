@@ -107,6 +107,7 @@ $font-stack-gilroy-bl: 'Gilroy-ExtraBold', serif;
   }
 
   &__value {
+    font: 100% $font-stack-gilroy-bl;
     margin-right: -10px;
   }
 
