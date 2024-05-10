@@ -10,7 +10,7 @@
 
 <h3 align="center">A Place To Get Curious</h3>
 
-<h4 align="center"><a href=""><strong>Visit the site</strong></h4>
+<h4 align="center"><a href="https://forum-630fc.web.app/"><strong>Visit the site</strong></h4>
 
 <p></p>
 
@@ -64,7 +64,7 @@ Built with React, Sass, and Firebase, we’ve crafted a dynamic platform where u
 - Question asking functionality
 - Ability to answer an existing question
 - Responsiveness across various devices
-- Question and answer sorting by upvote, downvote and date
+- Question and answer sorting by upvote, downvote, and date
 - Robust error handling for various scenarios
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -93,8 +93,8 @@ while offering a safe space for asking questions and providing answers, as part 
 
 ### Building:
 - Created a reusable component structure, allowing for ease of future iterations
-- Established connectivity with the Community Firebase in order to interface with collections such as Communities, Questions, Answers and Users
-- Designed and developed a user-friendly UI, providing an easy solution for tech related conversation
+- Established connectivity with the Community Firebase to interface with collections such as Communities, Questions, Answers, and Users
+- Designed and developed a user-friendly UI, providing an easy solution for tech-related conversation
 
 ### Potential Future Iterations:
 - Ability to thread conversation in an answer
@@ -133,11 +133,14 @@ Dinne Kopelevich | [LinkedIn](https://www.linkedin.com/in/dinne-kopelevich-17458
 
 **Designers**<br>
 Samreen Mamaparo | [LinkedIn](https://www.linkedin.com/in/samreenmamaparo/) | [Portfolio](https://www.samreenmamaparo.com/)<br>
-Lucy Zhang | <br>
+Lucy Zhang | [LinkedIn](https://www.linkedin.com/in/lucy-zhang211/) | [Portfolio](https://lucyzdesign.com/)<br>
 Vincent Ng | [LinkedIn](https://www.linkedin.com/in/thevincentng/) | [Portfolio](https://www.thevincentng.com/)<br>
 
 **Project Manager**<br>
 Brajesh K. Singh | [LinkedIn](https://www.linkedin.com/in/brajeshksingh/)<br>
+
+**Team Lead**<br>
+Melissa Davidson | [LinkedIn](https://www.linkedin.com/in/mellyd2323/)<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
