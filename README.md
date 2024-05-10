@@ -10,7 +10,7 @@
 
 <h3 align="center">A Place To Get Curious</h3>
 
-<h4 align="center"><a href="https://forum-630fc.web.app/"><strong>Visit the site</strong></h4>
+<h4 align="center"><a href="https://forum-630fc.web.app/" target="_blank"><strong>Visit the site</strong></h4>
 
 <p></p>
 
